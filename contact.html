@@ -1,37 +1,95 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    <title>Contact me</title>
-<style>
-    h3{
-        font-family: Georgia; color: #444; 
-    }
-    p{
-        font-family: Georgia; color: #444; 
-    }
-    label{
-        font-family: Georgia; color: #444; 
-    }
-</style>
+        .contact-form {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .contact-form h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .contact-form p {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .contact-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(34, 34, 34);
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: rgb(154, 204, 243);
+        }
+    </style>
 </head>
-
 <body>
-    <h3 >My Contact Details</h3>
-    <p>Bogor, West Java, Indonesia</p>
-    <p>+62817141342</p>
-    <p>taufik@arkana.co.id</p>
-    <hr>
-    <form action="mailto:taufik@arkana.co.id" method="post" enctype="plain/text">
-        <label>Your Name:</label>
-        <input type="text" name="YourName" value=""><br>
-        <label>Your Email:</label>
-        <input type="email" name="YourEmail" value=""><br>
-        <label>Your Messagge:</label><br>
-        <textarea name="YourMessage" rows="10" cols="30"></textarea>
-        <input type="submit" name="">
-    </form>
-</body>
+    <div class="contact-form">
+        <h1>Contact Me</h1>
+        <p>If you have any questions or queries, feel free to submit them using the form below. I’m here to help!</p>
+        <form action="mailto:taufkh@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
 </html>
