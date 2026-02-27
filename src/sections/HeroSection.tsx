@@ -1,10 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Mail, Phone, Linkedin, Award, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const [profileImageFailed, setProfileImageFailed] = useState(false);
   const yearsExperience = Math.max(new Date().getFullYear() - 2021, 1);
 
   useEffect(() => {
@@ -159,13 +160,21 @@ export function HeroSection() {
               {/* Profile Image Container */}
               <div className="relative w-72 h-72 rounded-full bg-gradient-to-br from-primary to-secondary p-1">
                 <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
-                  {/* Placeholder for profile photo */}
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-2">
-                      <span className="text-5xl font-bold text-gradient">TH</span>
+                  {!profileImageFailed ? (
+                    <img
+                      src="./profile.png"
+                      alt="Taufik Hidayat"
+                      className="w-full h-full object-cover object-top"
+                      onError={() => setProfileImageFailed(true)}
+                    />
+                  ) : (
+                    <div className="text-center">
+                      <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-2">
+                        <span className="text-5xl font-bold text-gradient">TH</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Add profile.png in public folder</p>
                     </div>
-                    <p className="text-sm text-muted-foreground">Add your photo here</p>
-                  </div>
+                  )}
                 </div>
               </div>
 
