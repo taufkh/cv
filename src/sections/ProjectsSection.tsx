@@ -162,6 +162,35 @@ const projects = [
   },
 ];
 
+const caseStudies = [
+  {
+    title: 'Case Study 1 - Multi-Branch Retail ERP Implementation',
+    challenge: 'Fragmented POS, manual reconciliation, and lack of centralized visibility.',
+    solution:
+      'Implemented integrated Odoo Sales, POS, Inventory, and Accounting with structured promotion logic and reporting control.',
+    outcome:
+      'Improved stock accuracy, centralized reporting visibility, reduced reconciliation workload, and strengthened branch-level operational discipline.',
+  },
+  {
+    title: 'Case Study 2 - F&B Coffee Shop POS Development',
+    challenge:
+      'Need for structured POS system aligned with inventory tracking and simplified operational flow.',
+    solution:
+      'Designed tailored POS configuration with shift logic, cost tracking, and inventory integration while maintaining interface simplicity.',
+    outcome:
+      'Improved transaction clarity, reduced inventory leakage risk, and enabled structured reporting for daily operations.',
+  },
+  {
+    title: 'Case Study 3 - B2B Distribution ERP Rollout',
+    challenge:
+      'Inventory-heavy environment with procurement complexity and credit-based sales.',
+    solution:
+      'Structured procurement-to-sales workflow integrating inventory valuation and accounting logic.',
+    outcome:
+      'Improved stock movement control, enhanced financial visibility, and created clearer operational accountability.',
+  },
+];
+
 export function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null);
@@ -208,6 +237,24 @@ export function ProjectsSection() {
             Successful implementations across retail, manufacturing, tourism, and HR
             management sectors
           </p>
+        </div>
+
+        {/* Case Studies */}
+        <div className="grid lg:grid-cols-3 gap-6 mb-12">
+          {caseStudies.map((item, index) => (
+            <article
+              key={item.title}
+              className="reveal opacity-0 bg-white rounded-2xl p-6 shadow-sm border border-border/50"
+              style={{ animationDelay: `${0.35 + index * 0.1}s` }}
+            >
+              <h3 className="text-lg font-bold text-foreground mb-4">{item.title}</h3>
+              <div className="space-y-3 text-sm text-foreground/80">
+                <p><span className="font-semibold text-foreground">Challenge:</span> {item.challenge}</p>
+                <p><span className="font-semibold text-foreground">Solution:</span> {item.solution}</p>
+                <p><span className="font-semibold text-foreground">Outcome:</span> {item.outcome}</p>
+              </div>
+            </article>
+          ))}
         </div>
 
         {/* Projects Grid */}
