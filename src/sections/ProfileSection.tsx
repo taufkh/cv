@@ -1,32 +1,16 @@
 import { useEffect, useRef } from 'react';
-import { Target, Users, Lightbulb, Zap } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
-const highlights = [
-  {
-    icon: Target,
-    title: 'Process Optimization',
-    description: 'Streamlining complex business workflows into efficient systems',
-  },
-  {
-    icon: Users,
-    title: 'User Training',
-    description: 'Empowering teams with clear, empathetic training sessions',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Problem Solving',
-    description: 'Turning stakeholder feedback into practical solutions',
-  },
-  {
-    icon: Zap,
-    title: 'Fast Implementation',
-    description: 'Delivering projects on time and within budget',
-  },
+const idealClients = [
+  'Growing SMEs with 10 to 50 active system users',
+  'Multi-branch retail or F&B operators scaling operations',
+  'B2B distributors managing inventory-intensive workflows',
+  'Business owners who value structure over shortcuts',
+  'Companies ready to commit effort alongside system transformation',
 ];
 
 export function ProfileSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const yearsExperience = Math.max(new Date().getFullYear() - 2021, 1);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -58,10 +42,10 @@ export function ProfileSection() {
           <div className="space-y-6">
             <div className="reveal opacity-0" style={{ animationDelay: '0.1s' }}>
               <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-                About Me
+                Positioning
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold mt-2 text-foreground">
-                Profile
+                Strategic Implementation Focus
               </h2>
             </div>
 
@@ -70,44 +54,50 @@ export function ProfileSection() {
               style={{ animationDelay: '0.2s' }}
             >
               <p>
-                Taufik Hidayat is an ERP enthusiast who thrives on simplifying complex
-                business processes using Odoo. With over {yearsExperience} years of hands-on experience
-                as a Functional Consultant and Business Analyst, he has helped companies
-                from retail to manufacturing move away from messy spreadsheets and siloed
-                systems into streamlined, integrated workflows.
+                Growing businesses often reach a stage where spreadsheets, manual
+                reconciliation, and disconnected systems start limiting clarity and
+                slowing growth.
               </p>
               <p>
-                Specializing in key Odoo modules like{' '}
-                <span className="font-semibold text-primary">Sales</span>,{' '}
-                <span className="font-semibold text-primary">Inventory</span>,{' '}
-                <span className="font-semibold text-primary">CRM</span>, and{' '}
-                <span className="font-semibold text-primary">POS</span>, Taufik focuses
-                on creating systems people actually enjoy using, not just ones that tick
-                boxes.
+                I help small to mid-sized enterprises transition into structured Odoo
+                ERP environments where sales, inventory, finance, procurement, and
+                operations are fully integrated and aligned with real business
+                workflows.
               </p>
               <p>
-                Known for his ability to turn stakeholder feedback into practical
-                solutions and his knack for training users with clarity and empathy, he
-                brings a human touch to every digital transformation project he leads.
+                My focus is not simply system configuration. It is disciplined
+                implementation, scope control, and operational clarity that supports
+                sustainable business expansion.
+              </p>
+              <p>
+                With experience across retail, F&amp;B, B2B distribution, and
+                cross-border engagements including Singapore-based projects, I bring
+                both business understanding and structured system execution into every
+                implementation.
               </p>
             </div>
           </div>
 
-          {/* Right - Highlights Grid */}
-          <div className="grid sm:grid-cols-2 gap-4">
-            {highlights.map((item, index) => (
-              <div
-                key={item.title}
-                className="reveal opacity-0 p-6 bg-white rounded-2xl shadow-sm border border-border/50 card-hover"
-                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
+          {/* Right - Client Fit */}
+          <div
+            className="reveal opacity-0 p-6 bg-white rounded-2xl shadow-sm border border-border/50"
+            style={{ animationDelay: '0.3s' }}
+          >
+            <h3 className="text-xl font-semibold text-foreground mb-4">
+              Who We Work Best With
+            </h3>
+            <ul className="space-y-3">
+              {idealClients.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-foreground/80">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 text-sm text-muted-foreground">
+              We are selective in engagements to ensure alignment, sustainability, and
+              ethical integrity.
+            </p>
           </div>
         </div>
       </div>

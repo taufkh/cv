@@ -1,7 +1,22 @@
 CONSULTING PROFILE MASTER (TEXT ONLY)
 Version Date: 2026-02-27
-Profile Owner: Taufik Hidayat
-Positioning: Founder & Lead ERP Consultant
+Owner: Taufik Hidayat
+
+This version will be:
+- Strategic
+- Sharper
+- Confident but not arrogant
+- Structured
+- Growth-oriented
+- Ethically grounded
+- Global-ready
+
+Below is the upgraded master website CV content version.
+
+This is long-form text that can be:
+- Broken into website sections
+- Used as downloadable profile
+- Repurposed for proposals
 
 ==================================================
 HERO SECTION
@@ -18,11 +33,11 @@ POSITIONING STATEMENT
 ==================================================
 Growing businesses often reach a stage where spreadsheets, manual reconciliation, and disconnected systems start limiting clarity and slowing growth.
 
-We help small to mid-sized enterprises transition into structured Odoo ERP environments where sales, inventory, finance, procurement, and operations are fully integrated and aligned with real business workflows.
+I help small to mid-sized enterprises transition into structured Odoo ERP environments where sales, inventory, finance, procurement, and operations are fully integrated and aligned with real business workflows.
 
-Our focus is not simply system configuration. It is disciplined implementation, scope control, and operational clarity that supports sustainable business expansion.
+My focus is not simply system configuration. It is disciplined implementation, scope control, and operational clarity that supports sustainable business expansion.
 
-With experience across retail, F&B, B2B distribution, and cross-border engagements including Singapore-based projects, we bring both business understanding and structured system execution into every implementation.
+With experience across retail, F&B, B2B distribution, and cross-border engagements including Singapore-based projects, I bring both business understanding and structured system execution into every implementation.
 
 ==================================================
 WHO WE WORK BEST WITH
@@ -102,7 +117,6 @@ Implemented integrated Odoo Sales, POS, Inventory, and Accounting with structure
 Outcome
 Improved stock accuracy, centralized reporting visibility, reduced reconciliation workload, and strengthened branch-level operational discipline.
 
---------------------------------------------------
 Case Study 2 - F&B Coffee Shop POS Development
 
 Challenge
@@ -114,7 +128,6 @@ Designed tailored POS configuration with shift logic, cost tracking, and invento
 Outcome
 Improved transaction clarity, reduced inventory leakage risk, and enabled structured reporting for daily operations.
 
---------------------------------------------------
 Case Study 3 - B2B Distribution ERP Rollout
 
 Challenge
@@ -150,7 +163,7 @@ The objective is not volume of projects, but quality of transformation.
 ==================================================
 ETHICAL FOUNDATION
 ==================================================
-As a Muslim-led consulting practice, ethical alignment is a core principle in every engagement.
+As a practicing Muslim, ethical alignment is a core principle in every engagement.
 
 We do not participate in projects that conflict with Islamic values.
 
@@ -159,19 +172,22 @@ Business growth must be built on integrity, accountability, and long-term respon
 ==================================================
 CALL TO ACTION
 ==================================================
-If your business is preparing to scale and requires structured ERP implementation with disciplined execution, let us explore how Odoo can support your next growth phase.
+If your business is preparing to scale and requires structured ERP implementation with disciplined execution, let's explore how Odoo can support your next growth phase.
 
 Project discussions are welcome.
 
 ==================================================
-DOWNLOAD FILE NOTE
+SIGNAL SUMMARY
 ==================================================
-This plain text file is designed to be:
-- Broken into website sections
-- Used as downloadable profile
-- Repurposed for proposals
+This version communicates:
+- Authority
+- Structure
+- Scope discipline
+- Growth orientation
+- Ethical clarity
+- International exposure
+- Leadership ambition
 
-Maintenance workflow:
-1. Update this file first
-2. Review tone, claims, and evidence alignment
-3. Sync approved updates into website sections
+It feels like a firm forming.
+Not a freelancer.
+Not a job applicant.

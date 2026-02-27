@@ -1,71 +1,56 @@
 import { useEffect, useRef } from 'react';
-import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import {
-  Settings,
-  BarChart3,
-  Users,
-  ClipboardCheck,
-  HeadphonesIcon,
-  FileText,
-  Code,
-  Palette,
-} from 'lucide-react';
+import { Building2, UtensilsCrossed, Boxes, Users, Globe2, CheckCircle2 } from 'lucide-react';
 
-const coreSkills = [
+const industries = [
   {
-    name: 'Odoo Configuration',
-    level: 95,
-    icon: Settings,
-    description: 'Module setup, workflow configuration, system optimization',
+    title: 'Retail Operations',
+    description:
+      'Multi-branch sales integration, POS synchronization, centralized reporting, and promotion logic structuring.',
+    icon: Building2,
   },
   {
-    name: 'Business Process Analysis',
-    level: 90,
-    icon: BarChart3,
-    description: 'Requirements gathering, process mapping, workflow design',
+    title: 'F&B Operations',
+    description:
+      'Coffee shop POS development with structured inventory discipline, cost awareness, and operational simplicity for staff adoption.',
+    icon: UtensilsCrossed,
   },
   {
-    name: 'Project Management',
-    level: 85,
-    icon: ClipboardCheck,
-    description: 'Timeline management, resource allocation, stakeholder communication',
+    title: 'B2B Distribution & Industrial Supply',
+    description:
+      'Procurement-heavy, inventory-intensive environments requiring credit control, stock accuracy, and structured warehouse workflows.',
+    icon: Boxes,
   },
   {
-    name: 'User Training',
-    level: 92,
+    title: 'HR & Payroll',
+    description:
+      'Regulatory-compliant payroll implementation and attendance integration.',
     icon: Users,
-    description: 'End-user training, documentation, knowledge transfer',
+  },
+  {
+    title: 'Cross-Border Exposure',
+    description:
+      'Experience supporting structured ERP engagements involving Singapore-based stakeholders and governance standards.',
+    icon: Globe2,
   },
 ];
 
-const technicalSkills = [
-  { name: 'Odoo Configuration', icon: Settings },
-  { name: 'Business Process Analysis', icon: BarChart3 },
-  { name: 'User Training', icon: Users },
-  { name: 'System Testing', icon: ClipboardCheck },
-  { name: 'Support', icon: HeadphonesIcon },
-  { name: 'Documentation', icon: FileText },
-  { name: 'Basic HTML', icon: Code },
-  { name: 'Basic CSS', icon: Code },
-  { name: 'Basic Figma', icon: Palette },
+const approach = [
+  'Operational Reality Assessment',
+  'Scope Discipline',
+  'Workflow Architecture',
+  'Controlled Customization',
+  'Structured Testing & Training',
+  'Post-Go-Live Stabilization',
 ];
 
-const modules = [
-  'Sales',
-  'Inventory',
-  'CRM',
-  'POS',
-  'Accounting',
-  'Purchase',
-  'Manufacturing',
-  'Payroll',
-  'Attendance',
-  'Employee',
-  'Recruitment',
-  'Website',
-  'Helpdesk',
-  'Time Off',
+const mistakes = [
+  'Overcomplicated workflows that confuse users',
+  'Scope expansion without budget alignment',
+  'Customization driven by preference instead of necessity',
+  'Inventory logic misalignment leading to stock inaccuracies',
+  'ERP projects treated as software installation instead of business transformation',
+  'Owners expecting automation without operational commitment',
 ];
 
 export function SkillsSection() {
@@ -92,92 +77,60 @@ export function SkillsSection() {
   return (
     <section id="skills" ref={sectionRef} className="section-padding">
       <div className="container-custom">
-        {/* Section Header */}
         <div className="text-center mb-12">
           <span
             className="reveal opacity-0 text-sm font-semibold text-primary uppercase tracking-wider"
             style={{ animationDelay: '0.1s' }}
           >
-            Expertise
+            Industry Experience
           </span>
           <h2
             className="reveal opacity-0 text-3xl sm:text-4xl font-bold mt-2 text-foreground"
             style={{ animationDelay: '0.2s' }}
           >
-            Skills & Competencies
+            Where We Operate Best
           </h2>
-          <p
-            className="reveal opacity-0 text-muted-foreground mt-4 max-w-2xl mx-auto"
-            style={{ animationDelay: '0.3s' }}
-          >
-            Comprehensive skill set in Odoo ERP implementation, business analysis,
-            and project management
-          </p>
         </div>
 
-        {/* Core Skills with Progress Bars */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {coreSkills.map((skill, index) => (
+          {industries.map((item, index) => (
             <div
-              key={skill.name}
+              key={item.title}
               className="reveal opacity-0 p-6 bg-white rounded-2xl shadow-sm border border-border/50 card-hover"
-              style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+              style={{ animationDelay: `${0.3 + index * 0.1}s` }}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <skill.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold text-foreground">{skill.name}</h3>
-                    <span className="text-sm font-medium text-primary">
-                      {skill.level}%
-                    </span>
-                  </div>
-                  <Progress value={skill.level} className="h-2 mb-2" />
-                  <p className="text-sm text-muted-foreground">{skill.description}</p>
-                </div>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <item.icon className="w-6 h-6 text-primary" />
               </div>
+              <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+              <p className="text-sm text-muted-foreground">{item.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Technical Skills Grid */}
-        <div
-          className="reveal opacity-0 mb-12"
-          style={{ animationDelay: '0.8s' }}
-        >
-          <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
-            Technical Skills
-          </h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {technicalSkills.map((skill) => (
-              <div
-                key={skill.name}
-                className="flex items-center gap-2 px-4 py-2 bg-muted rounded-full hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
-              >
-                <skill.icon className="w-4 h-4" />
-                <span className="text-sm font-medium">{skill.name}</span>
-              </div>
-            ))}
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="reveal opacity-0 p-6 bg-white rounded-2xl shadow-sm border border-border/50" style={{ animationDelay: '0.8s' }}>
+            <h3 className="text-xl font-semibold text-foreground mb-4">Consulting Approach</h3>
+            <p className="text-sm text-muted-foreground mb-4">ERP implementation succeeds when structure is prioritized over speed.</p>
+            <div className="flex flex-wrap gap-2">
+              {approach.map((item) => (
+                <Badge key={item} variant="outline" className="px-3 py-1">
+                  {item}
+                </Badge>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Odoo Modules */}
-        <div className="reveal opacity-0" style={{ animationDelay: '0.9s' }}>
-          <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
-            Odoo Modules Expertise
-          </h3>
-          <div className="flex flex-wrap justify-center gap-2">
-            {modules.map((module) => (
-              <Badge
-                key={module}
-                variant="outline"
-                className="px-4 py-2 text-sm font-medium border-2 hover:bg-primary hover:text-white hover:border-primary transition-colors cursor-default"
-              >
-                {module}
-              </Badge>
-            ))}
+          <div className="reveal opacity-0 p-6 bg-white rounded-2xl shadow-sm border border-border/50" style={{ animationDelay: '0.9s' }}>
+            <h3 className="text-xl font-semibold text-foreground mb-4">Common ERP Mistakes We Prevent</h3>
+            <ul className="space-y-2">
+              {mistakes.map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-foreground/80">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

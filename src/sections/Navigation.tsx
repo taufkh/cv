@@ -4,10 +4,10 @@ import { Button } from '@/components/ui/button';
 
 const navItems = [
   { label: 'Profile', href: '#profile' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Education', href: '#education' },
+  { label: 'Industry', href: '#skills' },
+  { label: 'Background', href: '#experience' },
+  { label: 'Case Studies', href: '#projects' },
+  { label: 'Principles', href: '#principles' },
 ];
 
 export function Navigation() {

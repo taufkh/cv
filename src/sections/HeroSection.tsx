@@ -65,7 +65,7 @@ export function HeroSection() {
                 className="reveal opacity-0 text-xl sm:text-2xl text-muted-foreground font-medium"
                 style={{ animationDelay: '0.3s' }}
               >
-                Odoo Functional Consultant & Business Analyst
+                Founder & Lead ERP Consultant
               </p>
               <div
                 className="reveal opacity-0 flex items-center gap-2 text-muted-foreground"
@@ -81,9 +81,8 @@ export function HeroSection() {
               className="reveal opacity-0 text-lg text-foreground/80 max-w-xl leading-relaxed"
               style={{ animationDelay: '0.5s' }}
             >
-              ERP enthusiast with {yearsExperience}+ years of experience helping companies streamline
-              operations through Odoo implementation. Specializing in Sales, Inventory,
-              CRM, and POS modules.
+              Structured Odoo ERP implementation for growing SMEs. We design disciplined,
+              scalable ERP systems for Retail, F&B, and B2B operations.
             </p>
 
             {/* CTA Buttons */}

@@ -4,7 +4,7 @@ import { ProfileSection } from './sections/ProfileSection';
 import { SkillsSection } from './sections/SkillsSection';
 import { ExperienceSection } from './sections/ExperienceSection';
 import { ProjectsSection } from './sections/ProjectsSection';
-import { EducationSection } from './sections/EducationSection';
+import { PrinciplesSection } from './sections/PrinciplesSection';
 import { ContactSection } from './sections/ContactSection';
 import { Navigation } from './sections/Navigation';
 import { ScrollToTop } from './sections/ScrollToTop';
@@ -25,7 +25,7 @@ function App() {
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
-        <EducationSection />
+        <PrinciplesSection />
         <ContactSection />
       </main>
       <ScrollToTop />
