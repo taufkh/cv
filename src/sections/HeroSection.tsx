@@ -135,7 +135,7 @@ export function HeroSection() {
                 <span className="hidden sm:inline">+62 817-1413-42</span>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/taufkhidayat/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"

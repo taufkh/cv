@@ -22,7 +22,7 @@ const contactMethods = [
     icon: Linkedin,
     label: 'LinkedIn',
     value: 'Connect with me',
-    href: 'https://linkedin.com',
+    href: 'https://www.linkedin.com/in/taufkhidayat/',
     color: 'from-blue-500 to-cyan-500',
   },
 ];
