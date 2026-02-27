@@ -1,0 +1,265 @@
+CV CONTENT MASTER (TEXT ONLY)
+Version Date: 2026-02-27
+Owner: Taufik Hidayat
+
+==================================================
+1) BASIC PROFILE
+==================================================
+Full Name: Taufik Hidayat
+Headline: Odoo Functional Consultant & Business Analyst
+Location: Jakarta, Indonesia
+Availability: Available for work
+Years of ERP Experience: Dynamic counter based on start year 2021 (currently shown as 5+ in 2026)
+Certification: Odoo v16 Certified
+
+Short Professional Summary:
+ERP enthusiast with 5+ years of experience helping companies streamline operations through Odoo implementation. Specializing in Sales, Inventory, CRM, and POS modules.
+
+==================================================
+2) ABOUT / PROFILE CONTENT
+==================================================
+Paragraph 1:
+Taufik Hidayat is an ERP enthusiast who thrives on simplifying complex business processes using Odoo. With over 5 years of hands-on experience as a Functional Consultant and Business Analyst, he has helped companies from retail to manufacturing move away from messy spreadsheets and siloed systems into streamlined, integrated workflows.
+
+Paragraph 2:
+Specializing in key Odoo modules like Sales, Inventory, CRM, and POS, Taufik focuses on creating systems people actually enjoy using, not just ones that tick boxes.
+
+Paragraph 3:
+Known for his ability to turn stakeholder feedback into practical solutions and his knack for training users with clarity and empathy, he brings a human touch to every digital transformation project he leads.
+
+Profile Highlights:
+- Process Optimization: Streamlining complex business workflows into efficient systems
+- User Training: Empowering teams with clear, empathetic training sessions
+- Problem Solving: Turning stakeholder feedback into practical solutions
+- Fast Implementation: Delivering projects on time and within budget
+
+==================================================
+3) CORE SKILLS & COMPETENCIES
+==================================================
+Core Skills (with proficiency):
+- Odoo Configuration (95%): Module setup, workflow configuration, system optimization
+- Business Process Analysis (90%): Requirements gathering, process mapping, workflow design
+- Project Management (85%): Timeline management, resource allocation, stakeholder communication
+- User Training (92%): End-user training, documentation, knowledge transfer
+
+Technical Skills:
+- Odoo Configuration
+- Business Process Analysis
+- User Training
+- System Testing
+- Support
+- Documentation
+- Basic HTML
+- Basic CSS
+- Basic Figma
+
+Odoo Modules Expertise:
+- Sales
+- Inventory
+- CRM
+- POS
+- Accounting
+- Purchase
+- Manufacturing
+- Payroll
+- Attendance
+- Employee
+- Recruitment
+- Website
+- Helpdesk
+- Time Off
+
+==================================================
+4) PROFESSIONAL EXPERIENCE
+==================================================
+A) PT Mplus Solusi Perdana
+Role: Business Analyst
+Period: October 2024 - April 2025
+Employment Type: Full-time
+Responsibilities / Achievements:
+- Analyzed client requirements and translated business needs into actionable technical solutions
+- Created comprehensive technical documentation and process flow diagrams
+- Conducted User Acceptance Testing (UAT) and System Integration Testing (SIT)
+- Collaborated with cross-functional teams to optimize workflows and improve user experience
+- Ensured project alignment with organizational goals through stakeholder management
+
+B) PT Arkana Solusi Digital
+Role: Odoo Middle Functional
+Period: January 2023 - October 2024
+Employment Type: Full-time
+Responsibilities / Achievements:
+- Specialized in Sales, Accounting, Inventory, and Manufacturing modules
+- Led requirement gathering sessions and created detailed functional specifications
+- Collaborated with developers and project managers to deliver customized Odoo solutions
+- Successfully delivered projects within budget and on schedule
+- Provided ongoing support and optimization for client systems
+
+C) PT Arkana Solusi Digital
+Role: Project Manager
+Period: March 2021 - January 2023
+Employment Type: Full-time
+Responsibilities / Achievements:
+- Managed end-to-end Odoo ERP implementation projects
+- Oversaw project scope, timeline, and budget management
+- Coordinated cross-functional teams for seamless business process integration
+- Delivered customized solutions for Sales, Accounting, Inventory, and Manufacturing
+- Maintained high standards of quality and accountability throughout project lifecycle
+
+D) PT Buana Desain Arsiplano
+Role: Architecture Feasibility Expert
+Period: July 2020 - November 2020
+Employment Type: Contract
+Responsibilities / Achievements:
+- Assessed viability and feasibility of building projects from architectural standpoint
+- Collaborated with clients, architects, engineers, and government officials
+- Evaluated project potential and identified potential obstacles
+- Proposed solutions to ensure successful project completion
+
+==================================================
+5) PROJECT PORTFOLIO (ODOO IMPLEMENTATIONS)
+==================================================
+1. PT Citra Busana Indonesia
+Modules: Sales, Inventory, Accounting, Purchase, Point of Sales
+Overview:
+Led implementation for a prominent retail business, integrating essential modules to streamline operations. Developed complex promotional features and advanced reporting capabilities for improved operational efficiency.
+Key Achievements:
+- Integrated 5 core modules for end-to-end retail management
+- Developed custom promotional features
+- Created advanced reporting dashboards
+- Improved operational efficiency significantly
+
+2. CV Senglie
+Modules: Sales, Invoice, Accounting, Purchase, Manufacture
+Overview:
+Customized Odoo system for inventory management, production planning, and sales distribution using default modules for cost-effective implementation.
+Key Achievements:
+- Streamlined manufacturing workflows
+- Optimized inventory management
+- Improved production planning efficiency
+- Cost-effective implementation approach
+
+3. Dream Tour
+Modules: Tour & Registration, Accounting, Website
+Overview:
+Implemented Odoo for a Tour & Travel Company to manage tour packages and enable travelers to purchase through the integrated website.
+Key Achievements:
+- Built integrated booking system
+- Created customer-facing website
+- Automated tour package management
+- Streamlined payment processing
+
+4. Perum Bulog
+Modules: Sales, Accounting, Invoice, Purchase
+Overview:
+Responsible for software testing, defect reporting, and creating comprehensive user manuals. Conducted UAT and SIT to ensure proper functionality.
+Key Achievements:
+- Conducted thorough UAT and SIT testing
+- Created detailed user manuals
+- Identified and reported critical defects
+- Ensured software met project requirements
+
+5. PT Arina Multi Karya
+Modules: Employee, Attendance, Payroll, Recruitment, Website
+Overview:
+Full HR management system implementation including employee database, attendance tracking, payroll processing, and recruitment management.
+Key Achievements:
+- Implemented complete HR module suite
+- Automated payroll processing
+- Streamlined recruitment workflow
+- Integrated company website
+
+6. Medika Plaza Indonesia
+Modules: Payroll
+Overview:
+Project manager for Odoo payroll implementation, overseeing project progress and ensuring timely completion with high quality standards.
+Key Achievements:
+- Delivered payroll system on schedule
+- Maintained high quality standards
+- Fostered productive team environment
+- Proactively addressed roadblocks
+
+7. PT Global Teknologi Niaga
+Modules: Inventory, Purchase, POS, Sales
+Overview:
+Ensured successful project execution within timeline, fostering collaborative team environment and maintaining quality standards.
+Key Achievements:
+- Executed project within timeline
+- Maintained quality and accountability
+- Provided regular stakeholder updates
+- Achieved project goals successfully
+
+8. PT Indofresh
+Modules: Payroll, Attendance, Time Off
+Overview:
+Oversaw implementation and optimization of HR modules for payroll, attendance, and time off management.
+Key Achievements:
+- Optimized HR module usage
+- Streamlined attendance tracking
+- Improved time off management
+- Kept project on track
+
+9. PT Elemen Gemilang Suryamansika
+Modules: Sales, Inventory, Purchase, CRM, Helpdesk
+Overview:
+Led implementation of comprehensive business management solution utilizing Sales, Inventory, Purchase, CRM, and Helpdesk modules.
+Key Achievements:
+- Integrated CRM with sales workflow
+- Implemented helpdesk support system
+- Streamlined inventory management
+- Met specific company requirements
+
+==================================================
+6) EDUCATION
+==================================================
+A) University of Surrey
+Location: Guildford, England
+Degree: Master in Environmental Psychology
+Period: 2018 - 2019
+Description:
+Specialized in understanding human behavior in physical environments, applying psychological principles to design and architecture.
+
+B) Universitas Indonesia
+Location: Depok, Indonesia
+Degree: Bachelor of Architecture
+Period: 2013 - 2017
+Description:
+Comprehensive architectural education with focus on sustainable design and human-centered spatial planning.
+
+Additional Education Note:
+Combined expertise in design thinking and user-centered approach.
+
+==================================================
+7) CONTACT & LINKS
+==================================================
+Primary Email: taufkh@gmail.com
+WhatsApp: +62 817-1413-42
+WhatsApp URL: https://wa.link/xk0hfx
+LinkedIn URL: https://www.linkedin.com/in/taufkhidayat/
+Location Statement: Based in Jakarta, Indonesia - Available for remote work worldwide
+
+CTA Texts Used in Website:
+- Contact Me
+- View Projects
+- Let's Work Together
+- Ready to Start Your Odoo Journey?
+- Send Message
+- View My Work
+- Discuss Similar Project
+
+==================================================
+8) NAVIGATION LABELS (WEBSITE)
+==================================================
+- Profile
+- Skills
+- Experience
+- Projects
+- Education
+
+==================================================
+9) MAINTENANCE NOTE
+==================================================
+This file is a text-only master content reference for CV updates.
+Recommended update workflow:
+1. Update this txt first.
+2. Review wording and consistency.
+3. Sync changes to React sections (Hero/Profile/Skills/Experience/Projects/Education/Contact).
