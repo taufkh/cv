@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const yearsExperience = Math.max(new Date().getFullYear() - 2021, 1);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -79,7 +80,7 @@ export function HeroSection() {
               className="reveal opacity-0 text-lg text-foreground/80 max-w-xl leading-relaxed"
               style={{ animationDelay: '0.5s' }}
             >
-              ERP enthusiast with 3+ years of experience helping companies streamline
+              ERP enthusiast with {yearsExperience}+ years of experience helping companies streamline
               operations through Odoo implementation. Specializing in Sales, Inventory,
               CRM, and POS modules.
             </p>
@@ -175,7 +176,7 @@ export function HeroSection() {
               </div>
 
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg px-4 py-3">
-                <p className="text-2xl font-bold text-gradient">3+</p>
+                <p className="text-2xl font-bold text-gradient">{yearsExperience}+</p>
                 <p className="text-xs text-muted-foreground">Years Experience</p>
               </div>
             </div>

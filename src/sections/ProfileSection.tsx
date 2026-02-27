@@ -26,6 +26,7 @@ const highlights = [
 
 export function ProfileSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const yearsExperience = Math.max(new Date().getFullYear() - 2021, 1);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -70,7 +71,7 @@ export function ProfileSection() {
             >
               <p>
                 Taufik Hidayat is an ERP enthusiast who thrives on simplifying complex
-                business processes using Odoo. With over 3 years of hands-on experience
+                business processes using Odoo. With over {yearsExperience} years of hands-on experience
                 as a Functional Consultant and Business Analyst, he has helped companies
                 from retail to manufacturing move away from messy spreadsheets and siloed
                 systems into streamlined, integrated workflows.
