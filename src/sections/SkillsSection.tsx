@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Badge } from '@/components/ui/badge';
-import { Building2, UtensilsCrossed, Boxes, Users, Globe2, CheckCircle2 } from 'lucide-react';
+import { Building2, UtensilsCrossed, Boxes, Globe2, CheckCircle2 } from 'lucide-react';
 
 const industries = [
   {
@@ -20,12 +20,6 @@ const industries = [
     description:
       'Procurement-heavy, inventory-intensive environments requiring credit control, stock accuracy, and structured warehouse workflows.',
     icon: Boxes,
-  },
-  {
-    title: 'HR & Payroll',
-    description:
-      'Regulatory-compliant payroll implementation and attendance integration.',
-    icon: Users,
   },
   {
     title: 'Cross-Border Exposure',
