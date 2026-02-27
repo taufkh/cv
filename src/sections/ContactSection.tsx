@@ -134,8 +134,8 @@ export function ContactSection() {
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="gap-2 border-2 border-white text-white hover:bg-white/10"
+                  variant="secondary"
+                  className="gap-2 bg-white text-primary hover:bg-white/90"
                   onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   View My Work
