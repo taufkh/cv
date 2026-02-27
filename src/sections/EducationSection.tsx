@@ -6,7 +6,7 @@ const education = [
     institution: 'University of Surrey',
     location: 'Guildford, England',
     degree: 'Master in Environmental Psychology',
-    period: '2018 - 2019',
+    period: '2014 - 2015',
     description:
       'Specialized in understanding human behavior in physical environments, applying psychological principles to design and architecture.',
   },
@@ -14,7 +14,7 @@ const education = [
     institution: 'Universitas Indonesia',
     location: 'Depok, Indonesia',
     degree: 'Bachelor of Architecture',
-    period: '2013 - 2017',
+    period: '2009 - 2013',
     description:
       'Comprehensive architectural education with focus on sustainable design and human-centered spatial planning.',
   },
