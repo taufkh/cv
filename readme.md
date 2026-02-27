@@ -71,3 +71,20 @@ export default defineConfig([
   },
 ])
 ```
+
+## Deploy to GitHub Pages
+
+This project is ready to be deployed as a static site (HTML/CSS/JS in `dist/`) using GitHub Pages.
+
+### One-time setup
+
+1. Push this repo to GitHub (branch `main`).
+2. In GitHub: `Settings` -> `Pages`.
+3. Set **Build and deployment** source to **GitHub Actions**.
+
+### Deploy flow
+
+- Workflow file: `.github/workflows/deploy-pages.yml`
+- Trigger: push to `main` (or manual run via Actions tab)
+- Build output uploaded: `dist/`
+- Public URL format: `https://<username>.github.io/<repo>/`
