@@ -70,12 +70,14 @@ export function Navigation() {
             {/* CTA Button */}
             <div className="hidden md:block">
               <Button
+                asChild
                 size="sm"
                 className="bg-primary hover:bg-primary/90 text-white gap-2"
-                onClick={() => window.open('mailto:taufkh@gmail.com', '_blank')}
               >
-                <Download className="w-4 h-4" />
-                Download CV
+                <a href="./cv-content.txt" download="taufik-hidayat-consulting-profile.txt">
+                  <Download className="w-4 h-4" />
+                  Download CV
+                </a>
               </Button>
             </div>
 
@@ -121,11 +123,17 @@ export function Navigation() {
             ))}
             <hr className="my-2" />
             <Button
+              asChild
               className="w-full bg-primary hover:bg-primary/90 text-white gap-2"
-              onClick={() => window.open('mailto:taufkh@gmail.com', '_blank')}
             >
-              <Download className="w-4 h-4" />
-              Download CV
+              <a
+                href="./cv-content.txt"
+                download="taufik-hidayat-consulting-profile.txt"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Download className="w-4 h-4" />
+                Download CV
+              </a>
             </Button>
           </div>
         </div>
