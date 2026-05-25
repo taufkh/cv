@@ -12,7 +12,7 @@ import { ScrollToTop } from './sections/ScrollToTop';
 
 function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <a href="#main-content" className="skip-link">
         Skip to content
       </a>

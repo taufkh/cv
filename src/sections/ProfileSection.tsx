@@ -35,7 +35,7 @@ export function ProfileSection() {
   return (
     <section id="about" ref={sectionRef} className="section-padding">
       <div className="container-custom">
-        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)]">
+        <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:gap-10">
           <div className="space-y-8">
             <div className="reveal opacity-0" style={{ animationDelay: '0.1s' }}>
               <span className="eyebrow">About</span>
@@ -72,11 +72,11 @@ export function ProfileSection() {
               </p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-3 sm:gap-4">
               {differentiators.map((item, index) => (
                 <div
                   key={item.title}
-                  className="reveal rounded-[1.6rem] border border-slate-200/80 bg-white px-5 py-5 shadow-[0_20px_50px_-40px_rgba(15,23,42,0.35)] opacity-0"
+                  className="reveal rounded-[1.35rem] border border-slate-200/80 bg-white px-4 py-4 shadow-[0_20px_50px_-40px_rgba(15,23,42,0.35)] opacity-0 sm:rounded-[1.6rem] sm:px-5 sm:py-5"
                   style={{ animationDelay: `${0.26 + index * 0.08}s` }}
                 >
                   <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(15,118,110,0.12),rgba(180,83,9,0.18))]">
@@ -90,13 +90,13 @@ export function ProfileSection() {
           </div>
 
           <div
-            className="reveal rounded-[2rem] border border-slate-200/80 bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ed_100%)] p-7 shadow-[0_28px_70px_-48px_rgba(15,23,42,0.45)] opacity-0"
+            className="reveal rounded-[1.7rem] border border-slate-200/80 bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ed_100%)] p-5 shadow-[0_28px_70px_-48px_rgba(15,23,42,0.45)] opacity-0 sm:rounded-[2rem] sm:p-7"
             style={{ animationDelay: '0.3s' }}
           >
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-slate-500">
               Best Fit Engagements
             </p>
-            <h3 className="mt-3 text-2xl font-semibold text-slate-950">
+            <h3 className="mt-3 text-[1.6rem] font-semibold leading-tight text-slate-950 sm:text-2xl">
               The strongest fit is usually a business that values structure over shortcuts.
             </h3>
             <ul className="mt-6 space-y-4">

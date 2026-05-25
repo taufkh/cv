@@ -29,7 +29,7 @@ export function ScrollToTop() {
     >
       <Button
         size="icon"
-        className="h-12 w-12 rounded-full bg-slate-950 text-white shadow-[0_20px_48px_-32px_rgba(15,23,42,0.85)] transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-slate-900 hover:shadow-[0_26px_60px_-34px_rgba(15,23,42,0.9)]"
+        className="h-11 w-11 rounded-full bg-slate-950 text-white shadow-[0_20px_48px_-32px_rgba(15,23,42,0.85)] transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-slate-900 hover:shadow-[0_26px_60px_-34px_rgba(15,23,42,0.9)] sm:h-12 sm:w-12"
         onClick={scrollToTop}
         aria-label="Scroll back to top"
       >

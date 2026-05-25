@@ -38,6 +38,7 @@
 
   body {
     min-width: 320px;
+    overflow-x: hidden;
     background:
       radial-gradient(circle at top, rgba(15, 118, 110, 0.05), transparent 32%),
       linear-gradient(180deg, #fbf8f2 0%, #f6f0e6 40%, #fbf8f2 100%);
@@ -74,7 +75,7 @@
   }
 
   .section-padding {
-    @apply px-4 py-14 sm:px-6 md:py-24 lg:px-8;
+    @apply px-4 py-12 sm:px-6 sm:py-14 md:py-24 lg:px-8;
   }
 
   .container-custom {
@@ -86,7 +87,8 @@
   }
 
   .section-title {
-    @apply font-display text-[3rem] leading-[1.02] text-slate-950 sm:text-5xl;
+    @apply font-display text-[2.35rem] leading-[1.05] text-slate-950 sm:text-[2.9rem] lg:text-5xl;
+    text-wrap: balance;
   }
 
   .card-hover {
@@ -116,6 +118,13 @@
 
   .skip-link:focus {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 420px) {
+  .section-title {
+    font-size: 2.1rem;
+    line-height: 1.08;
   }
 }
 

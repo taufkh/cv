@@ -33,12 +33,12 @@ export function Navigation() {
       <nav
         className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow,padding] duration-300 ${
           isScrolled
-            ? 'border-b border-slate-200/70 bg-[rgba(248,244,237,0.88)] py-3 shadow-[0_18px_60px_-42px_rgba(15,23,42,0.45)] backdrop-blur-xl'
-            : 'bg-transparent py-5'
+            ? 'border-b border-slate-200/70 bg-[rgba(248,244,237,0.88)] py-2.5 shadow-[0_18px_60px_-42px_rgba(15,23,42,0.45)] backdrop-blur-xl'
+            : 'bg-transparent py-4 sm:py-5'
         }`}
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <a href="#top" className="text-lg font-semibold tracking-[0.18em] text-slate-900">
+          <a href="#top" className="text-base font-semibold tracking-[0.16em] text-slate-900 sm:text-lg sm:tracking-[0.18em]">
             TH
           </a>
 
@@ -95,7 +95,7 @@ export function Navigation() {
         <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" onClick={closeMenu} />
         <div
           id="mobile-navigation"
-          className={`absolute left-4 right-4 top-20 rounded-[1.8rem] border border-slate-200 bg-[rgba(248,244,237,0.96)] p-4 shadow-[0_28px_80px_-46px_rgba(15,23,42,0.45)] transition-[transform,opacity] duration-300 ${
+          className={`absolute left-4 right-4 top-[4.5rem] rounded-[1.55rem] border border-slate-200 bg-[rgba(248,244,237,0.96)] p-4 shadow-[0_28px_80px_-46px_rgba(15,23,42,0.45)] transition-[transform,opacity] duration-300 sm:top-20 sm:rounded-[1.8rem] ${
             isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
           }`}
         >

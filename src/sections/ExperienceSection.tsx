@@ -29,7 +29,7 @@ export function ExperienceSection() {
       className="section-padding bg-[linear-gradient(180deg,rgba(248,244,237,0.45),rgba(255,255,255,1))]"
     >
       <div className="container-custom">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start lg:gap-10">
           <div>
             <span className="reveal eyebrow opacity-0" style={{ animationDelay: '0.1s' }}>
               Approach
@@ -46,11 +46,11 @@ export function ExperienceSection() {
               validating the custom stack, and preparing the business for reliable use.
             </p>
 
-            <div className="mt-8 grid gap-4">
+            <div className="mt-8 grid gap-3 sm:gap-4">
               {approachSteps.map((step, index) => (
                 <div
                   key={step}
-                  className="reveal flex items-center gap-4 rounded-[1.6rem] border border-slate-200/80 bg-white px-5 py-4 shadow-[0_18px_44px_-38px_rgba(15,23,42,0.32)] opacity-0"
+                  className="reveal flex items-center gap-3 rounded-[1.3rem] border border-slate-200/80 bg-white px-4 py-3.5 shadow-[0_18px_44px_-38px_rgba(15,23,42,0.32)] opacity-0 sm:gap-4 sm:rounded-[1.6rem] sm:px-5 sm:py-4"
                   style={{ animationDelay: `${0.32 + index * 0.08}s` }}
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[rgba(15,118,110,0.12)] text-sm font-semibold text-primary">
@@ -68,13 +68,13 @@ export function ExperienceSection() {
           </div>
 
           <div
-            className="reveal rounded-[2rem] border border-slate-200/10 bg-slate-950 p-7 text-slate-100 shadow-[0_30px_80px_-48px_rgba(15,23,42,0.8)] opacity-0"
+            className="reveal rounded-[1.7rem] border border-slate-200/10 bg-slate-950 p-5 text-slate-100 shadow-[0_30px_80px_-48px_rgba(15,23,42,0.8)] opacity-0 sm:rounded-[2rem] sm:p-7"
             style={{ animationDelay: '0.3s' }}
           >
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-slate-400">
               What Clients Can Expect
             </p>
-            <h3 className="mt-3 text-2xl font-semibold text-white">
+            <h3 className="mt-3 text-[1.6rem] font-semibold leading-tight text-white sm:text-2xl">
               Calm process discipline, not improvisation disguised as customization.
             </h3>
             <ul className="mt-6 space-y-4">

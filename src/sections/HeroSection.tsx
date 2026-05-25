@@ -41,7 +41,7 @@ export function HeroSection() {
                 <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">
                   Taufik Hidayat
                 </p>
-                <h1 className="font-display max-w-4xl text-[3.35rem] leading-[0.92] text-slate-950 sm:text-6xl lg:text-7xl">
+                <h1 className="font-display max-w-4xl text-[2.9rem] leading-[0.94] text-slate-950 sm:text-[4.5rem] lg:text-7xl">
                   Structured Odoo consulting for businesses that need control before scale.
                 </h1>
               </div>
@@ -91,7 +91,7 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="reveal grid gap-3 pt-2 opacity-0 sm:grid-cols-3" style={{ animationDelay: '0.36s' }}>
+            <div className="reveal grid gap-3 pt-2 opacity-0 min-[390px]:grid-cols-2 sm:grid-cols-3" style={{ animationDelay: '0.36s' }}>
               <a
                 href="mailto:taufkh@gmail.com"
                 className="rounded-[1.4rem] border border-slate-200/80 bg-white/78 p-4 transition-colors hover:border-slate-300 hover:bg-white"
@@ -136,7 +136,7 @@ export function HeroSection() {
           </div>
 
           <div className="reveal flex justify-center opacity-0 lg:justify-end" style={{ animationDelay: '0.2s' }}>
-            <div className="relative w-full max-w-[22rem]">
+            <div className="relative w-full max-w-[20rem] sm:max-w-[22rem] lg:max-w-[24rem]">
               <div className="absolute inset-x-8 top-10 h-40 rounded-full bg-[rgba(180,83,9,0.18)] blur-3xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,239,227,0.96))] p-3 shadow-[0_32px_90px_-54px_rgba(15,23,42,0.7)] sm:rounded-[2.4rem] sm:p-4">
                 <div className="mb-3 rounded-[1.6rem] border border-slate-200/80 bg-white/85 p-2.5 sm:mb-4 sm:rounded-[2rem] sm:p-3">

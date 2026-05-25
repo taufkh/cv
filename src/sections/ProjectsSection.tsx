@@ -23,7 +23,7 @@ export function ProjectsSection() {
   return (
     <section id="case-studies" ref={sectionRef} className="section-padding">
       <div className="container-custom">
-        <div className="mb-12 max-w-3xl">
+        <div className="mb-10 max-w-3xl sm:mb-12">
           <span className="reveal eyebrow opacity-0" style={{ animationDelay: '0.1s' }}>
             Featured Case Studies
           </span>
@@ -40,22 +40,22 @@ export function ProjectsSection() {
           </p>
         </div>
 
-        <div className="grid gap-6 xl:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 lg:grid-cols-3">
           {caseStudies.map((item, index) => (
             <button
               key={item.slug}
               type="button"
               onClick={() => setSelectedCaseStudy(item)}
-              className="reveal group rounded-[2rem] border border-slate-200/80 bg-white p-0 text-left shadow-[0_26px_70px_-52px_rgba(15,23,42,0.4)] opacity-0 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_32px_90px_-54px_rgba(15,23,42,0.46)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4"
+              className="reveal group rounded-[1.5rem] border border-slate-200/80 bg-white p-0 text-left shadow-[0_26px_70px_-52px_rgba(15,23,42,0.4)] opacity-0 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_32px_90px_-54px_rgba(15,23,42,0.46)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 sm:rounded-[2rem]"
               style={{ animationDelay: `${0.3 + index * 0.1}s` }}
             >
-              <div className="rounded-[1.9rem] border border-white/80 bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ed_100%)] p-6">
+              <div className="rounded-[1.45rem] border border-white/80 bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ed_100%)] p-5 sm:rounded-[1.9rem] sm:p-6">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
                       {item.platform}
                     </p>
-                    <h3 className="mt-3 text-2xl font-semibold text-slate-950">
+                    <h3 className="mt-3 text-[1.55rem] font-semibold leading-tight text-slate-950 sm:text-2xl">
                       {item.title}
                     </h3>
                   </div>
@@ -95,10 +95,10 @@ export function ProjectsSection() {
         </div>
 
         <Dialog open={selectedCaseStudy !== null} onOpenChange={() => setSelectedCaseStudy(null)}>
-          <DialogContent className="max-h-[90vh] max-w-3xl overflow-y-auto rounded-[2rem] border-slate-200/80 bg-[linear-gradient(180deg,#fffdf8_0%,#f7f3ea_100%)] p-0">
+          <DialogContent className="max-h-[90vh] max-w-3xl overflow-y-auto rounded-[1.6rem] border-slate-200/80 bg-[linear-gradient(180deg,#fffdf8_0%,#f7f3ea_100%)] p-0 sm:rounded-[2rem]">
             {selectedCaseStudy ? (
               <>
-                <div className="border-b border-slate-200/80 px-6 py-6 sm:px-8">
+                <div className="border-b border-slate-200/80 px-5 py-5 sm:px-8 sm:py-6">
                   <DialogHeader className="gap-4 text-left">
                     <div className="flex flex-wrap items-center gap-3">
                       <Badge
@@ -114,7 +114,7 @@ export function ProjectsSection() {
                         {selectedCaseStudy.disclosureMode === 'named' ? 'Named public case' : 'Anonymized public case'}
                       </Badge>
                     </div>
-                    <DialogTitle className="text-3xl font-semibold leading-tight text-slate-950">
+                    <DialogTitle className="text-[2rem] font-semibold leading-tight text-slate-950 sm:text-3xl">
                       {selectedCaseStudy.title}
                     </DialogTitle>
                     <DialogDescription className="text-sm leading-relaxed text-slate-600">
@@ -123,7 +123,7 @@ export function ProjectsSection() {
                   </DialogHeader>
                 </div>
 
-                <div className="space-y-8 px-6 py-6 sm:px-8">
+                <div className="space-y-7 px-5 py-5 sm:px-8 sm:py-6">
                   <section>
                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
                       Challenge
@@ -148,7 +148,7 @@ export function ProjectsSection() {
                   </section>
 
                   <section className="grid gap-5 lg:grid-cols-2">
-                    <div className="rounded-[1.7rem] border border-slate-200/80 bg-white p-5">
+                    <div className="rounded-[1.4rem] border border-slate-200/80 bg-white p-4 sm:rounded-[1.7rem] sm:p-5">
                       <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
                         Consulting Value
                       </p>
@@ -161,7 +161,7 @@ export function ProjectsSection() {
                         ))}
                       </ul>
                     </div>
-                    <div className="rounded-[1.7rem] border border-slate-200/80 bg-white p-5">
+                    <div className="rounded-[1.4rem] border border-slate-200/80 bg-white p-4 sm:rounded-[1.7rem] sm:p-5">
                       <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
                         Technical Proof
                       </p>
@@ -176,7 +176,7 @@ export function ProjectsSection() {
                     </div>
                   </section>
 
-                  <section className="rounded-[1.8rem] border border-slate-200/80 bg-slate-950 px-6 py-6 text-slate-100">
+                  <section className="rounded-[1.45rem] border border-slate-200/80 bg-slate-950 px-5 py-5 text-slate-100 sm:rounded-[1.8rem] sm:px-6 sm:py-6">
                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-400">
                       Relevance
                     </p>

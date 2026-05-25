@@ -66,7 +66,7 @@ export function SkillsSection() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((item, index) => (
             <article
               key={item.title}

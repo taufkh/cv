@@ -16,7 +16,7 @@ export function PrinciplesSection() {
   return (
     <section id="principles" ref={sectionRef} className="section-padding">
       <div className="container-custom">
-        <div className="mb-12 max-w-3xl">
+        <div className="mb-10 max-w-3xl sm:mb-12">
           <span className="reveal eyebrow opacity-0" style={{ animationDelay: '0.1s' }}>
             Principles
           </span>
@@ -25,15 +25,15 @@ export function PrinciplesSection() {
           </h2>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)]">
+        <div className="grid gap-4 sm:gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)]">
           <div
-            className="reveal rounded-[2rem] border border-slate-200/80 bg-white p-7 shadow-[0_26px_70px_-50px_rgba(15,23,42,0.45)] opacity-0"
+            className="reveal rounded-[1.55rem] border border-slate-200/80 bg-white p-5 shadow-[0_26px_70px_-50px_rgba(15,23,42,0.45)] opacity-0 sm:rounded-[2rem] sm:p-7"
             style={{ animationDelay: '0.28s' }}
           >
             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(15,118,110,0.12),rgba(180,83,9,0.18))]">
               <ShieldCheck className="h-5 w-5 text-slate-950" aria-hidden="true" />
             </div>
-            <h3 className="text-2xl font-semibold text-slate-950">Why clients engage me</h3>
+            <h3 className="text-[1.6rem] font-semibold leading-tight text-slate-950 sm:text-2xl">Why clients engage me</h3>
             <ul className="mt-6 space-y-4">
               {reasonsToEngage.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-slate-700">
@@ -49,21 +49,21 @@ export function PrinciplesSection() {
           </div>
 
           <div
-            className="reveal overflow-hidden rounded-[2rem] border border-amber-200/80 bg-[linear-gradient(180deg,rgba(255,251,235,0.95),rgba(255,247,219,0.98))] shadow-[0_28px_80px_-52px_rgba(146,64,14,0.35)] opacity-0"
+            className="reveal overflow-hidden rounded-[1.55rem] border border-amber-200/80 bg-[linear-gradient(180deg,rgba(255,251,235,0.95),rgba(255,247,219,0.98))] shadow-[0_28px_80px_-52px_rgba(146,64,14,0.35)] opacity-0 sm:rounded-[2rem]"
             style={{ animationDelay: '0.36s' }}
           >
-            <div className="border-b border-amber-200/70 px-7 py-6">
+            <div className="border-b border-amber-200/70 px-5 py-5 sm:px-7 sm:py-6">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-100">
                 <Scale className="h-5 w-5 text-amber-800" aria-hidden="true" />
               </div>
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-amber-700">
                 Ethical Foundation
               </p>
-              <h3 className="mt-3 text-2xl font-semibold text-slate-950">
+              <h3 className="mt-3 text-[1.6rem] font-semibold leading-tight text-slate-950 sm:text-2xl">
                 Commercial fit matters. Ethical fit matters too.
               </h3>
             </div>
-            <div className="space-y-5 px-7 py-6 text-sm leading-relaxed text-slate-700">
+            <div className="space-y-5 px-5 py-5 text-sm leading-relaxed text-slate-700 sm:px-7 sm:py-6">
               <p>
                 As a practicing Muslim, I treat ethical alignment as a real part of
                 engagement selection, not an afterthought. I do not want implementation
