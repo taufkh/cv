@@ -1,55 +1,85 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
+import { CheckCircle2, Scale, ShieldCheck } from 'lucide-react';
+import { useReveal } from '@/hooks/useReveal';
+
+const reasonsToEngage = [
+  'I am comfortable in both technical detail and business process conversations.',
+  'I care about approval discipline, data reliability, and operational clarity as much as feature delivery.',
+  'I prefer realistic scope, explicit tradeoffs, and long-term maintainability over fast but fragile customization.',
+];
 
 export function PrinciplesSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+  useReveal(sectionRef);
 
   return (
-    <section id="principles" ref={sectionRef} className="section-padding bg-muted/30">
+    <section id="principles" ref={sectionRef} className="section-padding">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <span className="reveal opacity-0 text-sm font-semibold text-primary uppercase tracking-wider" style={{ animationDelay: '0.1s' }}>
+        <div className="mb-12 max-w-3xl">
+          <span className="reveal eyebrow opacity-0" style={{ animationDelay: '0.1s' }}>
             Principles
           </span>
-          <h2 className="reveal opacity-0 text-3xl sm:text-4xl font-bold mt-2 text-foreground" style={{ animationDelay: '0.2s' }}>
-            Leadership Vision & Ethical Foundation
+          <h2 className="reveal section-title mt-3 opacity-0" style={{ animationDelay: '0.18s' }}>
+            Why clients engage me, and the principles that shape the engagement.
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6">
-          <div className="reveal opacity-0 bg-white rounded-2xl p-6 shadow-sm border border-border/50" style={{ animationDelay: '0.3s' }}>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Leadership Vision</h3>
-            <p className="text-foreground/80 leading-relaxed">
-              The long-term vision is to build a structured ERP consulting firm that prioritizes
-              disciplined execution, ethical alignment, and sustainable business partnerships.
-              The objective is not volume of projects, but quality of transformation.
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)]">
+          <div
+            className="reveal rounded-[2rem] border border-slate-200/80 bg-white p-7 shadow-[0_26px_70px_-50px_rgba(15,23,42,0.45)] opacity-0"
+            style={{ animationDelay: '0.28s' }}
+          >
+            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(15,118,110,0.12),rgba(180,83,9,0.18))]">
+              <ShieldCheck className="h-5 w-5 text-slate-950" aria-hidden="true" />
+            </div>
+            <h3 className="text-2xl font-semibold text-slate-950">Why clients engage me</h3>
+            <ul className="mt-6 space-y-4">
+              {reasonsToEngage.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-slate-700">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm leading-relaxed text-slate-600">
+              The long-term direction is to build a consulting practice known for
+              disciplined execution, ethical alignment, and sustainable client partnerships.
             </p>
           </div>
 
-          <div className="reveal opacity-0 bg-white rounded-2xl p-6 shadow-sm border border-border/50" style={{ animationDelay: '0.4s' }}>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Ethical Foundation</h3>
-            <p className="text-foreground/80 leading-relaxed">
-              As a practicing Muslim, ethical alignment is a core principle in every engagement.
-              We do not participate in projects that conflict with Islamic values. Business growth
-              must be built on integrity, accountability, and long-term responsibility.
-            </p>
+          <div
+            className="reveal overflow-hidden rounded-[2rem] border border-amber-200/80 bg-[linear-gradient(180deg,rgba(255,251,235,0.95),rgba(255,247,219,0.98))] shadow-[0_28px_80px_-52px_rgba(146,64,14,0.35)] opacity-0"
+            style={{ animationDelay: '0.36s' }}
+          >
+            <div className="border-b border-amber-200/70 px-7 py-6">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-100">
+                <Scale className="h-5 w-5 text-amber-800" aria-hidden="true" />
+              </div>
+              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-amber-700">
+                Ethical Foundation
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold text-slate-950">
+                Commercial fit matters. Ethical fit matters too.
+              </h3>
+            </div>
+            <div className="space-y-5 px-7 py-6 text-sm leading-relaxed text-slate-700">
+              <p>
+                As a practicing Muslim, I treat ethical alignment as a real part of
+                engagement selection, not an afterthought. I do not want implementation
+                work to be technically successful but ethically compromised.
+              </p>
+              <p>
+                In practice, that means I look for projects where integrity,
+                accountability, responsible commercial behavior, and long-term value are
+                taken seriously by both sides.
+              </p>
+              <p className="rounded-[1.3rem] border border-amber-200/80 bg-white/70 px-4 py-4 text-slate-700">
+                I do not participate in projects that conflict with Islamic values. The
+                goal is sustainable growth built on clarity, discipline, and responsible
+                decision-making.
+              </p>
+            </div>
           </div>
         </div>
       </div>

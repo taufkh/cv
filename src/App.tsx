@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { HeroSection } from './sections/HeroSection';
+import { CredibilityStripSection } from './sections/CredibilityStripSection';
 import { ProfileSection } from './sections/ProfileSection';
 import { SkillsSection } from './sections/SkillsSection';
 import { ExperienceSection } from './sections/ExperienceSection';
@@ -11,23 +11,21 @@ import { Navigation } from './sections/Navigation';
 import { ScrollToTop } from './sections/ScrollToTop';
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
   return (
-    <div className={`min-h-screen bg-background transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+    <div className="min-h-screen bg-background text-foreground">
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
       <Navigation />
-      <main>
+      <main id="main-content">
         <HeroSection />
+        <CredibilityStripSection />
         <ProfileSection />
         <SkillsSection />
-        <ExperienceSection />
         <ProjectsSection />
-        <EducationSection />
+        <ExperienceSection />
         <PrinciplesSection />
+        <EducationSection />
         <ContactSection />
       </main>
       <ScrollToTop />

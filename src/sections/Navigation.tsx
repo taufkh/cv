@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Download } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Menu, X, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
-  { label: 'Profile', href: '#profile' },
-  { label: 'Industry', href: '#skills' },
-  { label: 'Background', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Education', href: '#education' },
+  { label: 'About', href: '#about' },
+  { label: 'Capabilities', href: '#capabilities' },
+  { label: 'Case Studies', href: '#case-studies' },
+  { label: 'Approach', href: '#approach' },
   { label: 'Principles', href: '#principles' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export function Navigation() {
@@ -17,123 +17,93 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      setIsScrolled(window.scrollY > 72);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const closeMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow,padding] duration-300 ${
           isScrolled
-            ? 'bg-white/90 backdrop-blur-md shadow-sm py-3'
-            : 'bg-transparent py-4'
+            ? 'border-b border-slate-200/70 bg-[rgba(248,244,237,0.88)] py-3 shadow-[0_18px_60px_-42px_rgba(15,23,42,0.45)] backdrop-blur-xl'
+            : 'bg-transparent py-5'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <a
-              href="#"
-              className="text-lg font-bold text-gradient"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            >
-              TH.
-            </a>
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          <a href="#top" className="text-lg font-semibold tracking-[0.18em] text-slate-900">
+            TH
+          </a>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-1">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-primary transition-colors rounded-lg hover:bg-primary/5"
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-
-            {/* CTA Button */}
-            <div className="hidden md:block">
-              <Button
-                asChild
-                size="sm"
-                className="bg-primary hover:bg-primary/90 text-white gap-2"
+          <div className="hidden items-center gap-1 rounded-full border border-slate-200/70 bg-white/80 px-2 py-2 shadow-[0_14px_36px_-28px_rgba(15,23,42,0.3)] backdrop-blur md:flex">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
               >
-                <a href="./cv-content.txt" download="taufik-hidayat-consulting-profile.txt">
-                  <Download className="w-4 h-4" />
-                  Download CV
-                </a>
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-5 h-5" />
-              ) : (
-                <Menu className="w-5 h-5" />
-              )}
-            </button>
+                {item.label}
+              </a>
+            ))}
           </div>
+
+          <div className="hidden md:block">
+            <Button asChild size="sm" className="rounded-full bg-primary px-4 text-white shadow-[0_18px_40px_-26px_rgba(148,68,18,0.9)]">
+              <a href="mailto:taufkh@gmail.com?subject=Consulting%20Inquiry">
+                <Mail className="w-4 h-4" />
+                Start an Inquiry
+              </a>
+            </Button>
+          </div>
+
+          <button
+            type="button"
+            className="rounded-full border border-slate-200/80 bg-white/85 p-2 text-slate-900 shadow-sm transition-colors hover:bg-white md:hidden"
+            onClick={() => setIsMobileMenuOpen((current) => !current)}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          >
+            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-all duration-300 ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        className={`fixed inset-0 z-40 transition-[opacity,visibility] duration-300 md:hidden ${
+          isMobileMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" onClick={closeMenu} />
         <div
-          className="absolute inset-0 bg-black/20 backdrop-blur-sm"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-        <div
-          className={`absolute top-16 left-4 right-4 bg-white rounded-2xl shadow-xl p-4 transition-all duration-300 ${
+          id="mobile-navigation"
+          className={`absolute left-4 right-4 top-20 rounded-[1.8rem] border border-slate-200 bg-[rgba(248,244,237,0.96)] p-4 shadow-[0_28px_80px_-46px_rgba(15,23,42,0.45)] transition-[transform,opacity] duration-300 ${
             isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
           }`}
         >
           <div className="flex flex-col gap-1">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
-                className="px-4 py-3 text-left text-foreground/80 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors font-medium"
+                href={item.href}
+                onClick={closeMenu}
+                className="rounded-2xl px-4 py-3 text-left font-medium text-slate-700 transition-colors hover:bg-white hover:text-slate-950"
               >
                 {item.label}
-              </button>
+              </a>
             ))}
-            <hr className="my-2" />
-            <Button
-              asChild
-              className="w-full bg-primary hover:bg-primary/90 text-white gap-2"
-            >
-              <a
-                href="./cv-content.txt"
-                download="taufik-hidayat-consulting-profile.txt"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <Download className="w-4 h-4" />
-                Download CV
+            <hr className="my-2 border-slate-200" />
+            <Button asChild className="w-full rounded-full bg-primary text-white">
+              <a href="mailto:taufkh@gmail.com?subject=Consulting%20Inquiry" onClick={closeMenu}>
+                <Mail className="w-4 h-4" />
+                Start an Inquiry
               </a>
             </Button>
           </div>

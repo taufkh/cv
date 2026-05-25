@@ -1,131 +1,85 @@
-import { useEffect, useRef } from 'react';
-import { Badge } from '@/components/ui/badge';
-import { Building2, UtensilsCrossed, Boxes, Globe2, CheckCircle2 } from 'lucide-react';
+import { useRef } from 'react';
+import { BriefcaseBusiness, Route, ShieldCheck, Warehouse, ShoppingBag, ClipboardList } from 'lucide-react';
+import { useReveal } from '@/hooks/useReveal';
 
-const industries = [
+const capabilities = [
   {
-    title: 'Retail Operations',
+    title: 'ERP implementation structuring',
     description:
-      'Multi-branch sales integration, POS synchronization, centralized reporting, and promotion logic structuring.',
-    icon: Building2,
+      'Translate business complexity into a scoped, realistic implementation path with better requirement discipline and rollout clarity.',
+    icon: BriefcaseBusiness,
   },
   {
-    title: 'F&B Operations',
+    title: 'Business process customization',
     description:
-      'Coffee shop POS development with structured inventory discipline, cost awareness, and operational simplicity for staff adoption.',
-    icon: UtensilsCrossed,
+      'Shape Odoo behavior around actual sales, procurement, finance, and customer-service workflows instead of forcing teams into awkward defaults.',
+    icon: Route,
   },
   {
-    title: 'B2B Distribution & Industrial Supply',
+    title: 'Approval & control workflows',
     description:
-      'Procurement-heavy, inventory-intensive environments requiring credit control, stock accuracy, and structured warehouse workflows.',
-    icon: Boxes,
+      'Design approval gates, access rules, validation logic, and audit visibility where operational and finance control matters.',
+    icon: ShieldCheck,
   },
   {
-    title: 'Cross-Border Exposure',
+    title: 'Warehouse, sales & finance operations',
     description:
-      'Experience supporting structured ERP engagements involving Singapore-based stakeholders and governance standards.',
-    icon: Globe2,
+      'Support process-heavy environments that depend on stock accuracy, purchasing structure, quotation discipline, and accounting reliability.',
+    icon: Warehouse,
   },
-];
-
-const approach = [
-  'Operational Reality Assessment',
-  'Scope Discipline',
-  'Workflow Architecture',
-  'Controlled Customization',
-  'Structured Testing & Training',
-  'Post-Go-Live Stabilization',
-];
-
-const mistakes = [
-  'Overcomplicated workflows that confuse users',
-  'Scope expansion without budget alignment',
-  'Customization driven by preference instead of necessity',
-  'Inventory logic misalignment leading to stock inaccuracies',
-  'ERP projects treated as software installation instead of business transformation',
-  'Owners expecting automation without operational commitment',
+  {
+    title: 'POS, loyalty & membership logic',
+    description:
+      'Customize commercial and retail-facing experiences where Odoo POS needs to reflect real customer rules and store operations.',
+    icon: ShoppingBag,
+  },
+  {
+    title: 'Migration, UAT & rollout readiness',
+    description:
+      'Support testing, validation, migration preparation, and handover evidence so implementations are not left at feature-complete but deployment-fragile.',
+    icon: ClipboardList,
+  },
 ];
 
 export function SkillsSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+  useReveal(sectionRef);
 
   return (
-    <section id="skills" ref={sectionRef} className="section-padding">
+    <section id="capabilities" ref={sectionRef} className="section-padding bg-muted/40">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <span
-            className="reveal opacity-0 text-sm font-semibold text-primary uppercase tracking-wider"
-            style={{ animationDelay: '0.1s' }}
-          >
-            Industry Experience
+        <div className="mb-12 max-w-3xl">
+          <span className="reveal eyebrow opacity-0" style={{ animationDelay: '0.1s' }}>
+            Capabilities
           </span>
-          <h2
-            className="reveal opacity-0 text-3xl sm:text-4xl font-bold mt-2 text-foreground"
-            style={{ animationDelay: '0.2s' }}
-          >
-            Where We Operate Best
+          <h2 className="reveal section-title mt-3 opacity-0" style={{ animationDelay: '0.2s' }}>
+            Core consulting capabilities shaped by real implementation pressure.
           </h2>
+          <p
+            className="reveal mt-4 max-w-2xl opacity-0 text-base leading-relaxed text-slate-600"
+            style={{ animationDelay: '0.24s' }}
+          >
+            The work is strongest where business needs custom Odoo behavior but still
+            needs structure, approval clarity, testing discipline, and implementation
+            realism.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {industries.map((item, index) => (
-            <div
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {capabilities.map((item, index) => (
+            <article
               key={item.title}
-              className="reveal opacity-0 p-6 bg-white rounded-2xl shadow-sm border border-border/50 card-hover"
-              style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+              className="reveal card-hover rounded-[1.8rem] border border-slate-200/80 bg-white p-6 shadow-[0_24px_56px_-44px_rgba(15,23,42,0.4)] opacity-0"
+              style={{ animationDelay: `${0.3 + index * 0.08}s` }}
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <item.icon className="w-6 h-6 text-primary" />
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(15,118,110,0.12),rgba(180,83,9,0.18))]">
+                <item.icon className="h-5 w-5 text-slate-950" aria-hidden="true" />
               </div>
-              <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-              <p className="text-sm text-muted-foreground">{item.description}</p>
-            </div>
+              <h3 className="text-lg font-semibold text-slate-950">{item.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.description}</p>
+            </article>
           ))}
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-6">
-          <div className="reveal opacity-0 p-6 bg-white rounded-2xl shadow-sm border border-border/50" style={{ animationDelay: '0.8s' }}>
-            <h3 className="text-xl font-semibold text-foreground mb-4">Consulting Approach</h3>
-            <p className="text-sm text-muted-foreground mb-4">ERP implementation succeeds when structure is prioritized over speed.</p>
-            <div className="flex flex-wrap gap-2">
-              {approach.map((item) => (
-                <Badge key={item} variant="outline" className="px-3 py-1">
-                  {item}
-                </Badge>
-              ))}
-            </div>
-          </div>
-
-          <div className="reveal opacity-0 p-6 bg-white rounded-2xl shadow-sm border border-border/50" style={{ animationDelay: '0.9s' }}>
-            <h3 className="text-xl font-semibold text-foreground mb-4">Common ERP Mistakes We Prevent</h3>
-            <ul className="space-y-2">
-              {mistakes.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-foreground/80">
-                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </div>
     </section>

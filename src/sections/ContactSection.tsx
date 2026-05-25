@@ -1,158 +1,108 @@
-import { useEffect, useRef } from 'react';
-import { Mail, Phone, Linkedin, MapPin, Send, ExternalLink } from 'lucide-react';
+import { useRef } from 'react';
+import { Mail, Phone, Linkedin, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { useReveal } from '@/hooks/useReveal';
 
 const contactMethods = [
   {
     icon: Mail,
-    label: 'Email',
+    label: 'Email inquiry',
     value: 'taufkh@gmail.com',
-    href: 'mailto:taufkh@gmail.com',
-    color: 'from-red-500 to-orange-500',
+    href: 'mailto:taufkh@gmail.com?subject=Consulting%20Inquiry',
   },
   {
     icon: Phone,
     label: 'WhatsApp',
     value: '+62 817-1413-42',
     href: 'https://wa.link/xk0hfx',
-    color: 'from-green-500 to-emerald-500',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'Connect with me',
+    value: 'linkedin.com/in/taufkhidayat',
     href: 'https://www.linkedin.com/in/taufkhidayat/',
-    color: 'from-blue-500 to-cyan-500',
   },
 ];
 
 export function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+  useReveal(sectionRef);
 
   return (
     <section id="contact" ref={sectionRef} className="section-padding">
       <div className="container-custom">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <span
-            className="reveal opacity-0 text-sm font-semibold text-primary uppercase tracking-wider"
-            style={{ animationDelay: '0.1s' }}
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
+          <div
+            className="reveal overflow-hidden rounded-[2.4rem] border border-slate-200/80 bg-[linear-gradient(145deg,#0f172a_0%,#162336_44%,#0f766e_130%)] px-6 py-8 text-white shadow-[0_36px_90px_-56px_rgba(15,23,42,0.9)] opacity-0 sm:px-8"
+            style={{ animationDelay: '0.15s' }}
           >
-            Get In Touch
-          </span>
-          <h2
-            className="reveal opacity-0 text-3xl sm:text-4xl font-bold mt-2 text-foreground"
-            style={{ animationDelay: '0.2s' }}
-          >
-            Let's Work Together
-          </h2>
-          <p
-            className="reveal opacity-0 text-muted-foreground mt-4 max-w-2xl mx-auto"
-            style={{ animationDelay: '0.3s' }}
-          >
-            Ready to transform your business with Odoo? Let's discuss how I can help
-            streamline your operations
-          </p>
-        </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-teal-100/70">
+              Contact
+            </p>
+            <h2 className="mt-4 font-display text-4xl leading-[0.98] text-white sm:text-5xl">
+              If the business needs Odoo with more structure, let&apos;s talk.
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-200">
+              The best starting point is a clear description of your operational context,
+              the current bottlenecks, and the type of implementation or stabilization work
+              you are evaluating.
+            </p>
 
-        {/* Contact Cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-          {contactMethods.map((method, index) => (
-            <a
-              key={method.label}
-              href={method.href}
-              target={method.href.startsWith('http') ? '_blank' : undefined}
-              rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="reveal opacity-0 group"
-              style={{ animationDelay: `${0.4 + index * 0.1}s` }}
-            >
-              <Card className="h-full card-hover border-border/50 overflow-hidden">
-                <CardContent className="p-6 text-center">
-                  {/* Icon */}
-                  <div
-                    className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br ${method.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                  >
-                    <method.icon className="w-8 h-8 text-white" />
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button asChild size="lg" className="rounded-full bg-white px-6 text-slate-950 hover:bg-white/92">
+                <a href="mailto:taufkh@gmail.com?subject=Consulting%20Inquiry">
+                  Send an Inquiry
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full border-white/20 bg-white/10 px-6 text-white hover:bg-white/16 hover:text-white"
+              >
+                <a href="#case-studies">Review Case Studies</a>
+              </Button>
+            </div>
+
+            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">
+              <MapPin className="h-4 w-4" />
+              Based in Jakarta, Indonesia • Available for remote collaboration
+            </div>
+          </div>
+
+          <div className="grid gap-4">
+            {contactMethods.map((method, index) => (
+              <a
+                key={method.label}
+                href={method.href}
+                target={method.href.startsWith('http') ? '_blank' : undefined}
+                rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="reveal rounded-[1.8rem] border border-slate-200/80 bg-white p-6 shadow-[0_24px_56px_-46px_rgba(15,23,42,0.4)] opacity-0 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_30px_74px_-50px_rgba(15,23,42,0.46)]"
+                style={{ animationDelay: `${0.24 + index * 0.08}s` }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(15,118,110,0.12),rgba(180,83,9,0.18))]">
+                    <method.icon className="h-5 w-5 text-slate-950" aria-hidden="true" />
                   </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
+                      {method.label}
+                    </p>
+                    <p className="mt-2 text-base font-semibold text-slate-950">{method.value}</p>
+                  </div>
+                </div>
+              </a>
+            ))}
 
-                  {/* Label */}
-                  <p className="text-sm text-muted-foreground mb-1">{method.label}</p>
-
-                  {/* Value */}
-                  <p className="text-lg font-semibold text-foreground flex items-center justify-center gap-2">
-                    {method.value}
-                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </p>
-                </CardContent>
-              </Card>
-            </a>
-          ))}
-        </div>
-
-        {/* CTA Card */}
-        <div
-          className="reveal opacity-0 max-w-2xl mx-auto"
-          style={{ animationDelay: '0.7s' }}
-        >
-          <Card className="bg-gradient-to-br from-primary to-secondary border-0 overflow-hidden">
-            <CardContent className="p-8 text-center text-white">
-              <h3 className="text-2xl font-bold mb-3">
-                Ready to Start Your Odoo Journey?
-              </h3>
-              <p className="text-white/80 mb-6 max-w-md mx-auto">
-                Whether you need a full ERP implementation or module customization,
-                I'm here to help you achieve your business goals.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="gap-2 bg-white text-primary hover:bg-white/90"
-                  onClick={() => window.open('mailto:taufkh@gmail.com', '_blank')}
-                >
-                  <Send className="w-4 h-4" />
-                  Send Message
-                </Button>
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="gap-2 bg-white text-primary hover:bg-white/90"
-                  onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  View My Work
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Location */}
-        <div
-          className="reveal opacity-0 mt-12 text-center"
-          style={{ animationDelay: '0.8s' }}
-        >
-          <div className="inline-flex items-center gap-2 text-muted-foreground">
-            <MapPin className="w-4 h-4" />
-            <span className="text-sm">Based in Jakarta, Indonesia • Available for remote work worldwide</span>
+            <div
+              className="reveal rounded-[1.8rem] border border-slate-200/80 bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ed_100%)] p-6 text-sm leading-relaxed text-slate-600 shadow-[0_22px_56px_-46px_rgba(15,23,42,0.35)] opacity-0"
+              style={{ animationDelay: '0.48s' }}
+            >
+              A short inquiry with your business context, current bottleneck, and desired
+              timeline is enough to start a useful first conversation.
+            </div>
           </div>
         </div>
       </div>

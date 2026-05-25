@@ -1,133 +1,82 @@
-import { useEffect, useRef } from 'react';
-import { GraduationCap, MapPin, Calendar } from 'lucide-react';
+import { useRef } from 'react';
+import { GraduationCap, Award, Globe2 } from 'lucide-react';
+import { useReveal } from '@/hooks/useReveal';
 
-const education = [
+const supportingSignals = [
   {
-    institution: 'University of Surrey',
-    location: 'Guildford, England',
-    degree: 'Master in Environmental Psychology',
-    period: '2014 - 2015',
+    title: 'Odoo certification',
+    subtitle: 'Odoo v16 Certified',
     description:
-      'Specialized in understanding human behavior in physical environments, applying psychological principles to design and architecture.',
+      'A formal credential supporting practical implementation work across custom Odoo delivery environments.',
+    icon: Award,
   },
   {
-    institution: 'Universitas Indonesia',
-    location: 'Depok, Indonesia',
-    degree: 'Bachelor of Architecture',
-    period: '2009 - 2013',
+    title: 'Cross-sector exposure',
+    subtitle: 'Retail, F&B, B2B, POS, warehouse, finance',
     description:
-      'Comprehensive architectural education with focus on sustainable design and human-centered spatial planning.',
+      'Recent projects span operationally different environments, from store-facing POS flows to governance-heavy warehouse and finance controls.',
+    icon: Globe2,
+  },
+  {
+    title: 'Academic foundation',
+    subtitle: 'University of Surrey & Universitas Indonesia',
+    description:
+      'Background in environmental psychology and architecture reinforces a structured, human-centered way of thinking about systems and operational environments.',
+    icon: GraduationCap,
   },
 ];
 
 export function EducationSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+  useReveal(sectionRef);
 
   return (
-    <section
-      id="education"
-      ref={sectionRef}
-      className="section-padding bg-muted/30"
-    >
+    <section id="background" ref={sectionRef} className="section-padding bg-muted/40">
       <div className="container-custom">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <span
-            className="reveal opacity-0 text-sm font-semibold text-primary uppercase tracking-wider"
-            style={{ animationDelay: '0.1s' }}
-          >
-            Academic Background
+        <div className="mb-12 max-w-3xl">
+          <span className="reveal eyebrow opacity-0" style={{ animationDelay: '0.1s' }}>
+            Supporting Background
           </span>
-          <h2
-            className="reveal opacity-0 text-3xl sm:text-4xl font-bold mt-2 text-foreground"
-            style={{ animationDelay: '0.2s' }}
-          >
-            Education
+          <h2 className="reveal section-title mt-3 opacity-0" style={{ animationDelay: '0.18s' }}>
+            Supporting proof that reinforces the consulting profile.
           </h2>
           <p
-            className="reveal opacity-0 text-muted-foreground mt-4 max-w-2xl mx-auto"
-            style={{ animationDelay: '0.3s' }}
+            className="reveal mt-4 opacity-0 text-base leading-relaxed text-slate-600"
+            style={{ animationDelay: '0.24s' }}
           >
-            Strong academic foundation in architecture and environmental psychology
+            These signals are not the main sales story, but they help explain the mix of
+            structured thinking, technical credibility, and cross-functional implementation work.
           </p>
         </div>
 
-        {/* Education Cards */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {education.map((edu, index) => (
-            <div
-              key={edu.institution}
-              className="reveal opacity-0 group"
-              style={{ animationDelay: `${0.4 + index * 0.15}s` }}
+        <div className="grid gap-5 md:grid-cols-3">
+          {supportingSignals.map((item, index) => (
+            <article
+              key={item.title}
+              className="reveal card-hover rounded-[1.8rem] border border-slate-200/80 bg-white p-6 shadow-[0_22px_56px_-44px_rgba(15,23,42,0.4)] opacity-0"
+              style={{ animationDelay: `${0.32 + index * 0.08}s` }}
             >
-              <div className="h-full bg-white rounded-2xl p-6 shadow-sm border border-border/50 card-hover">
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-5">
-                  <GraduationCap className="w-7 h-7 text-white" />
-                </div>
-
-                {/* Degree */}
-                <h3 className="text-xl font-bold text-foreground mb-2">
-                  {edu.degree}
-                </h3>
-
-                {/* Institution */}
-                <p className="text-lg font-medium text-primary mb-1">
-                  {edu.institution}
-                </p>
-
-                {/* Location & Period */}
-                <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
-                  <div className="flex items-center gap-1">
-                    <MapPin className="w-4 h-4" />
-                    <span>{edu.location}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    <span>{edu.period}</span>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <p className="text-sm text-foreground/70 leading-relaxed">
-                  {edu.description}
-                </p>
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(15,118,110,0.12),rgba(180,83,9,0.18))]">
+                <item.icon className="h-5 w-5 text-slate-900" aria-hidden="true" />
               </div>
-            </div>
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
+                {item.title}
+              </p>
+              <h3 className="mt-3 text-lg font-semibold text-slate-950">{item.subtitle}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.description}</p>
+            </article>
           ))}
         </div>
 
-        {/* Additional Info */}
         <div
-          className="reveal opacity-0 mt-12 text-center"
-          style={{ animationDelay: '0.7s' }}
+          className="reveal mt-10 rounded-[2rem] border border-slate-200/80 bg-white px-6 py-5 text-sm leading-relaxed text-slate-600 shadow-[0_22px_56px_-48px_rgba(15,23,42,0.35)] opacity-0"
+          style={{ animationDelay: '0.58s' }}
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/5 rounded-full">
-            <GraduationCap className="w-5 h-5 text-primary" />
-            <span className="text-sm text-foreground/80">
-              Combined expertise in{' '}
-              <span className="font-semibold text-primary">design thinking</span> and{' '}
-              <span className="font-semibold text-primary">user-centered approach</span>
-            </span>
-          </div>
+          My formal education includes a Master&apos;s degree in Environmental Psychology
+          from the University of Surrey and a Bachelor&apos;s degree in Architecture from
+          Universitas Indonesia. I treat that background as supporting context, not as a
+          substitute for delivery evidence.
         </div>
       </div>
     </section>
