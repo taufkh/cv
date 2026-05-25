@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Mail } from 'lucide-react';
+import { Menu, X, Mail, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
@@ -54,11 +54,22 @@ export function Navigation() {
             ))}
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-3 md:flex">
             <Button asChild size="sm" className="rounded-full bg-primary px-4 text-white shadow-[0_18px_40px_-26px_rgba(148,68,18,0.9)]">
               <a href="mailto:taufkh@gmail.com?subject=Consulting%20Inquiry">
                 <Mail className="w-4 h-4" />
                 Start an Inquiry
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="sm"
+              variant="outline"
+              className="rounded-full border-slate-300 bg-white/85 px-4 text-slate-900 shadow-[0_18px_40px_-30px_rgba(15,23,42,0.28)]"
+            >
+              <a href="./Taufik_Hidayat_CV.pdf" download="Taufik_Hidayat_CV.pdf">
+                <Download className="w-4 h-4" />
+                Download PDF
               </a>
             </Button>
           </div>
@@ -104,6 +115,20 @@ export function Navigation() {
               <a href="mailto:taufkh@gmail.com?subject=Consulting%20Inquiry" onClick={closeMenu}>
                 <Mail className="w-4 h-4" />
                 Start an Inquiry
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="w-full rounded-full border-slate-300 bg-white/85 text-slate-900"
+            >
+              <a
+                href="./Taufik_Hidayat_CV.pdf"
+                download="Taufik_Hidayat_CV.pdf"
+                onClick={closeMenu}
+              >
+                <Download className="w-4 h-4" />
+                Download PDF
               </a>
             </Button>
           </div>

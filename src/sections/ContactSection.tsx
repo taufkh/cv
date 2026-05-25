@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Mail, Phone, Linkedin, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, Linkedin, MapPin, ArrowRight, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useReveal } from '@/hooks/useReveal';
 
@@ -63,6 +63,17 @@ export function ContactSection() {
                 className="rounded-full border-white/20 bg-white/10 px-6 text-white hover:bg-white/16 hover:text-white"
               >
                 <a href="#case-studies">Review Case Studies</a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-full border-white/20 bg-white/10 px-6 text-white hover:bg-white/16 hover:text-white"
+              >
+                <a href="./Taufik_Hidayat_CV.pdf" download="Taufik_Hidayat_CV.pdf">
+                  <Download className="w-4 h-4" />
+                  Download PDF
+                </a>
               </Button>
             </div>
 
