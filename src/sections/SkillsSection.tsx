@@ -49,7 +49,7 @@ export function SkillsSection() {
   return (
     <section id="capabilities" ref={sectionRef} className="section-padding bg-muted/40">
       <div className="container-custom">
-        <div className="mb-12 max-w-3xl">
+        <div className="mb-10 max-w-3xl sm:mb-12">
           <span className="reveal eyebrow opacity-0" style={{ animationDelay: '0.1s' }}>
             Capabilities
           </span>
@@ -66,11 +66,11 @@ export function SkillsSection() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
           {capabilities.map((item, index) => (
             <article
               key={item.title}
-              className="reveal card-hover rounded-[1.8rem] border border-slate-200/80 bg-white p-6 shadow-[0_24px_56px_-44px_rgba(15,23,42,0.4)] opacity-0"
+              className="reveal card-hover rounded-[1.45rem] border border-slate-200/80 bg-white p-5 shadow-[0_24px_56px_-44px_rgba(15,23,42,0.4)] opacity-0 sm:rounded-[1.8rem] sm:p-6"
               style={{ animationDelay: `${0.3 + index * 0.08}s` }}
             >
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(15,118,110,0.12),rgba(180,83,9,0.18))]">

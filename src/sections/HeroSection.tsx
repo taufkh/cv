@@ -15,7 +15,7 @@ export function HeroSection() {
     <section
       id="top"
       ref={sectionRef}
-      className="relative overflow-hidden px-4 pb-24 pt-28 sm:px-6 lg:px-8 lg:pb-32 lg:pt-32"
+      className="relative overflow-hidden px-4 pb-20 pt-24 sm:px-6 lg:px-8 lg:pb-32 lg:pt-32"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-[78%] bg-[radial-gradient(circle_at_top,rgba(15,118,110,0.16),transparent_45%),linear-gradient(180deg,#f8f4ed_0%,#f5efe4_35%,#f7f4ee_100%)]" />
@@ -24,8 +24,8 @@ export function HeroSection() {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)]">
-          <div className="space-y-8">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:gap-12">
+          <div className="space-y-7 sm:space-y-8">
             <div className="reveal opacity-0" style={{ animationDelay: '0.05s' }}>
               <Badge
                 variant="outline"
@@ -41,7 +41,7 @@ export function HeroSection() {
                 <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">
                   Taufik Hidayat
                 </p>
-                <h1 className="font-display max-w-4xl text-5xl leading-[0.95] text-slate-950 sm:text-6xl lg:text-7xl">
+                <h1 className="font-display max-w-4xl text-[3.35rem] leading-[0.92] text-slate-950 sm:text-6xl lg:text-7xl">
                   Structured Odoo consulting for businesses that need control before scale.
                 </h1>
               </div>
@@ -71,7 +71,7 @@ export function HeroSection() {
               </div>
             </div>
 
-            <div className="reveal flex flex-wrap gap-4 opacity-0" style={{ animationDelay: '0.3s' }}>
+            <div className="reveal flex flex-col gap-3 opacity-0 sm:flex-row sm:flex-wrap sm:gap-4" style={{ animationDelay: '0.3s' }}>
               <Button asChild size="lg" className="rounded-full bg-primary px-6 text-white">
                 <a href="mailto:taufkh@gmail.com?subject=Consulting%20Inquiry">
                   <Mail className="w-4 h-4" />
@@ -138,13 +138,13 @@ export function HeroSection() {
           <div className="reveal flex justify-center opacity-0 lg:justify-end" style={{ animationDelay: '0.2s' }}>
             <div className="relative w-full max-w-[22rem]">
               <div className="absolute inset-x-8 top-10 h-40 rounded-full bg-[rgba(180,83,9,0.18)] blur-3xl" />
-              <div className="relative overflow-hidden rounded-[2.4rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,239,227,0.96))] p-4 shadow-[0_32px_90px_-54px_rgba(15,23,42,0.7)]">
-                <div className="mb-4 rounded-[2rem] border border-slate-200/80 bg-white/85 p-3">
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,239,227,0.96))] p-3 shadow-[0_32px_90px_-54px_rgba(15,23,42,0.7)] sm:rounded-[2.4rem] sm:p-4">
+                <div className="mb-3 rounded-[1.6rem] border border-slate-200/80 bg-white/85 p-2.5 sm:mb-4 sm:rounded-[2rem] sm:p-3">
                   {!profileImageFailed ? (
                     <img
                       src="./profile.png"
                       alt="Taufik Hidayat"
-                      className="aspect-[4/5] w-full rounded-[1.6rem] object-cover object-top"
+                      className="aspect-[4/5] w-full rounded-[1.25rem] object-cover object-top sm:rounded-[1.6rem]"
                       onError={() => setProfileImageFailed(true)}
                     />
                   ) : (
@@ -157,7 +157,7 @@ export function HeroSection() {
                   )}
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-[1.4rem] border border-slate-200/80 bg-white/80 px-4 py-4">
+                  <div className="rounded-[1.2rem] border border-slate-200/80 bg-white/80 px-4 py-4 sm:rounded-[1.4rem]">
                     <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
                       Consulting Focus
                     </p>
@@ -165,7 +165,7 @@ export function HeroSection() {
                       Operational discipline, approval controls, and rollout readiness.
                     </p>
                   </div>
-                  <div className="rounded-[1.4rem] border border-slate-200/80 bg-white/80 px-4 py-4">
+                  <div className="rounded-[1.2rem] border border-slate-200/80 bg-white/80 px-4 py-4 sm:rounded-[1.4rem]">
                     <p className="text-3xl font-semibold text-slate-950">{yearsExperience}+</p>
                     <p className="mt-1 text-sm leading-relaxed text-slate-600">
                       years working across ERP delivery, customization, and stabilization.

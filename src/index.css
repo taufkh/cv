@@ -58,7 +58,13 @@
   }
 
   section[id] {
-    scroll-margin-top: 6.5rem;
+    scroll-margin-top: 7.75rem;
+  }
+
+  @screen md {
+    section[id] {
+      scroll-margin-top: 6.5rem;
+    }
   }
 }
 
@@ -68,7 +74,7 @@
   }
 
   .section-padding {
-    @apply px-4 py-16 sm:px-6 lg:px-8 md:py-24;
+    @apply px-4 py-14 sm:px-6 md:py-24 lg:px-8;
   }
 
   .container-custom {
@@ -80,7 +86,7 @@
   }
 
   .section-title {
-    @apply font-display text-4xl leading-tight text-slate-950 sm:text-5xl;
+    @apply font-display text-[3rem] leading-[1.02] text-slate-950 sm:text-5xl;
   }
 
   .card-hover {

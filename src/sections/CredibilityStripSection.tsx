@@ -25,12 +25,12 @@ const credibilityItems = [
 
 export function CredibilityStripSection() {
   return (
-    <section aria-label="Consulting credibility" className="relative z-10 -mt-12 px-4 sm:px-6 lg:px-8">
+    <section aria-label="Consulting credibility" className="relative z-10 -mt-6 px-4 sm:-mt-12 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-6xl gap-3 rounded-[2rem] border border-white/70 bg-white/88 p-4 shadow-[0_24px_80px_-48px_rgba(15,23,42,0.5)] backdrop-blur xl:grid-cols-4">
         {credibilityItems.map((item) => (
           <div
             key={item.label}
-            className="rounded-[1.4rem] border border-slate-200/80 bg-white/80 px-4 py-4"
+            className="rounded-[1.25rem] border border-slate-200/80 bg-white/80 px-4 py-4 sm:rounded-[1.4rem]"
           >
             <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(22,78,99,0.12),rgba(180,83,9,0.18))] text-slate-900">
               <item.icon className="h-5 w-5" aria-hidden="true" />
