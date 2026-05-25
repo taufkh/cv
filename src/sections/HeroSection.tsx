@@ -15,7 +15,7 @@ export function HeroSection() {
     <section
       id="top"
       ref={sectionRef}
-      className="relative overflow-hidden px-4 pb-20 pt-24 sm:px-6 lg:px-8 lg:pb-32 lg:pt-32"
+      className="relative overflow-hidden px-4 pb-16 pt-24 sm:px-6 lg:px-8 lg:pb-32 lg:pt-32"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-[78%] bg-[radial-gradient(circle_at_top,rgba(15,118,110,0.16),transparent_45%),linear-gradient(180deg,#f8f4ed_0%,#f5efe4_35%,#f7f4ee_100%)]" />
@@ -25,7 +25,7 @@ export function HeroSection() {
 
       <div className="container-custom relative z-10">
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:gap-12">
-          <div className="space-y-7 sm:space-y-8">
+          <div className="order-2 space-y-7 sm:space-y-8 lg:order-1">
             <div className="reveal opacity-0" style={{ animationDelay: '0.05s' }}>
               <Badge
                 variant="outline"
@@ -41,12 +41,12 @@ export function HeroSection() {
                 <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">
                   Taufik Hidayat
                 </p>
-                <h1 className="font-display max-w-4xl text-[2.9rem] leading-[0.94] text-slate-950 sm:text-[4.5rem] lg:text-7xl">
+                <h1 className="font-display max-w-4xl text-[2.55rem] leading-[0.95] text-slate-950 sm:text-[4.5rem] lg:text-7xl">
                   Structured Odoo consulting for businesses that need control before scale.
                 </h1>
               </div>
               <p
-                className="reveal max-w-2xl opacity-0 text-lg leading-relaxed text-slate-700 sm:text-xl"
+                className="reveal max-w-2xl opacity-0 text-base leading-relaxed text-slate-700 sm:text-xl"
                 style={{ animationDelay: '0.18s' }}
               >
                 I help growing SMEs and operationally complex teams implement Odoo with
@@ -91,10 +91,10 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="reveal grid gap-3 pt-2 opacity-0 min-[390px]:grid-cols-2 sm:grid-cols-3" style={{ animationDelay: '0.36s' }}>
+            <div className="reveal grid gap-3 pt-1 opacity-0 min-[390px]:grid-cols-2 sm:grid-cols-3" style={{ animationDelay: '0.36s' }}>
               <a
                 href="mailto:taufkh@gmail.com"
-                className="rounded-[1.4rem] border border-slate-200/80 bg-white/78 p-4 transition-colors hover:border-slate-300 hover:bg-white"
+                className="rounded-[1.4rem] border border-slate-200/80 bg-white/78 p-4 transition-[background-color,border-color,transform] duration-300 hover:border-slate-300 hover:bg-white hover:-translate-y-0.5"
               >
                 <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10">
                   <Mail className="h-4 w-4 text-primary" />
@@ -108,7 +108,7 @@ export function HeroSection() {
                 href="https://wa.link/xk0hfx"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-[1.4rem] border border-slate-200/80 bg-white/78 p-4 transition-colors hover:border-slate-300 hover:bg-white"
+                className="rounded-[1.4rem] border border-slate-200/80 bg-white/78 p-4 transition-[background-color,border-color,transform] duration-300 hover:border-slate-300 hover:bg-white hover:-translate-y-0.5"
               >
                 <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-500/10">
                   <Phone className="h-4 w-4 text-emerald-600" />
@@ -122,7 +122,7 @@ export function HeroSection() {
                 href="https://www.linkedin.com/in/taufkhidayat/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-[1.4rem] border border-slate-200/80 bg-white/78 p-4 transition-colors hover:border-slate-300 hover:bg-white"
+                className="rounded-[1.4rem] border border-slate-200/80 bg-white/78 p-4 transition-[background-color,border-color,transform] duration-300 hover:border-slate-300 hover:bg-white hover:-translate-y-0.5 min-[390px]:col-span-2 sm:col-span-1"
               >
                 <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-2xl bg-sky-500/10">
                   <Linkedin className="h-4 w-4 text-blue-500" />
@@ -135,8 +135,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="reveal flex justify-center opacity-0 lg:justify-end" style={{ animationDelay: '0.2s' }}>
-            <div className="relative w-full max-w-[20rem] sm:max-w-[22rem] lg:max-w-[24rem]">
+          <div className="reveal order-1 flex justify-center opacity-0 lg:order-2 lg:justify-end" style={{ animationDelay: '0.2s' }}>
+            <div className="relative w-full max-w-[17.5rem] min-[390px]:max-w-[18.5rem] sm:max-w-[22rem] lg:max-w-[24rem]">
               <div className="absolute inset-x-8 top-10 h-40 rounded-full bg-[rgba(180,83,9,0.18)] blur-3xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,239,227,0.96))] p-3 shadow-[0_32px_90px_-54px_rgba(15,23,42,0.7)] sm:rounded-[2.4rem] sm:p-4">
                 <div className="mb-3 rounded-[1.6rem] border border-slate-200/80 bg-white/85 p-2.5 sm:mb-4 sm:rounded-[2rem] sm:p-3">
@@ -172,6 +172,14 @@ export function HeroSection() {
                     </p>
                   </div>
                 </div>
+              </div>
+              <div className="absolute -bottom-4 -right-3 rounded-[1.2rem] border border-white/80 bg-white/90 px-3 py-2 shadow-[0_18px_44px_-28px_rgba(15,23,42,0.34)] lg:-right-5">
+                <p className="text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-slate-500">
+                  Delivery Lens
+                </p>
+                <p className="mt-1 text-sm font-medium text-slate-900">
+                  Control, rollout, and operating clarity.
+                </p>
               </div>
             </div>
           </div>

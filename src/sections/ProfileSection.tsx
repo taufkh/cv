@@ -90,7 +90,7 @@ export function ProfileSection() {
           </div>
 
           <div
-            className="reveal rounded-[1.7rem] border border-slate-200/80 bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ed_100%)] p-5 shadow-[0_28px_70px_-48px_rgba(15,23,42,0.45)] opacity-0 sm:rounded-[2rem] sm:p-7"
+            className="reveal rounded-[1.7rem] border border-slate-200/80 bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ed_100%)] p-5 shadow-[0_28px_70px_-48px_rgba(15,23,42,0.45)] opacity-0 sm:rounded-[2rem] sm:p-7 lg:sticky lg:top-28"
             style={{ animationDelay: '0.3s' }}
           >
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-slate-500">

@@ -7,6 +7,7 @@ import { ProjectsSection } from './sections/ProjectsSection';
 import { EducationSection } from './sections/EducationSection';
 import { PrinciplesSection } from './sections/PrinciplesSection';
 import { ContactSection } from './sections/ContactSection';
+import { MobileActionBar } from './sections/MobileActionBar';
 import { Navigation } from './sections/Navigation';
 import { ScrollToTop } from './sections/ScrollToTop';
 
@@ -17,7 +18,7 @@ function App() {
         Skip to content
       </a>
       <Navigation />
-      <main id="main-content">
+      <main id="main-content" className="pb-24 md:pb-0">
         <HeroSection />
         <CredibilityStripSection />
         <ProfileSection />
@@ -28,6 +29,7 @@ function App() {
         <EducationSection />
         <ContactSection />
       </main>
+      <MobileActionBar />
       <ScrollToTop />
     </div>
   );

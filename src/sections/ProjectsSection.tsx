@@ -40,16 +40,18 @@ export function ProjectsSection() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:gap-6 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
           {caseStudies.map((item, index) => (
             <button
               key={item.slug}
               type="button"
               onClick={() => setSelectedCaseStudy(item)}
-              className="reveal group rounded-[1.5rem] border border-slate-200/80 bg-white p-0 text-left shadow-[0_26px_70px_-52px_rgba(15,23,42,0.4)] opacity-0 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_32px_90px_-54px_rgba(15,23,42,0.46)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 sm:rounded-[2rem]"
+              className={`reveal group rounded-[1.5rem] border border-slate-200/80 bg-white p-0 text-left shadow-[0_26px_70px_-52px_rgba(15,23,42,0.4)] opacity-0 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_32px_90px_-54px_rgba(15,23,42,0.46)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 sm:rounded-[2rem] ${
+                index === 0 ? 'md:col-span-2 xl:col-span-1' : ''
+              }`}
               style={{ animationDelay: `${0.3 + index * 0.1}s` }}
             >
-              <div className="rounded-[1.45rem] border border-white/80 bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ed_100%)] p-5 sm:rounded-[1.9rem] sm:p-6">
+              <div className="h-full rounded-[1.45rem] border border-white/80 bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ed_100%)] p-5 sm:rounded-[1.9rem] sm:p-6">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
