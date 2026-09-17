@@ -16,7 +16,7 @@ export function MobileActionBar() {
           variant="outline"
           className="h-11 flex-1 rounded-full border-slate-300 bg-white/88 text-slate-900 shadow-[0_16px_34px_-28px_rgba(15,23,42,0.35)]"
         >
-          <a href="./Taufik_Hidayat_CV.pdf" download="Taufik_Hidayat_CV.pdf">
+          <a href="./Taufik_Hidayat_CV.pdf?v=20260917" download="Taufik_Hidayat_CV.pdf">
             <Download className="h-4 w-4" />
             PDF
           </a>

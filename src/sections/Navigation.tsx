@@ -86,7 +86,7 @@ export function Navigation() {
               variant="outline"
               className="rounded-full border-slate-300 bg-white/85 px-4 text-slate-900 shadow-[0_18px_40px_-30px_rgba(15,23,42,0.28)]"
             >
-              <a href="./Taufik_Hidayat_CV.pdf" download="Taufik_Hidayat_CV.pdf">
+              <a href="./Taufik_Hidayat_CV.pdf?v=20260917" download="Taufik_Hidayat_CV.pdf">
                 <Download className="w-4 h-4" />
                 Download PDF
               </a>
@@ -152,7 +152,7 @@ export function Navigation() {
                 className="w-full rounded-full border-slate-300 bg-white/85 text-slate-900"
               >
                 <a
-                  href="./Taufik_Hidayat_CV.pdf"
+                  href="./Taufik_Hidayat_CV.pdf?v=20260917"
                   download="Taufik_Hidayat_CV.pdf"
                   onClick={closeMenu}
                 >

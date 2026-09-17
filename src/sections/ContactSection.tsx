@@ -70,7 +70,7 @@ export function ContactSection() {
                 variant="outline"
                 className="rounded-full border-white/20 bg-white/10 px-6 text-white hover:bg-white/16 hover:text-white"
               >
-                <a href="./Taufik_Hidayat_CV.pdf" download="Taufik_Hidayat_CV.pdf">
+                <a href="./Taufik_Hidayat_CV.pdf?v=20260917" download="Taufik_Hidayat_CV.pdf">
                   <Download className="w-4 h-4" />
                   Download PDF
                 </a>
