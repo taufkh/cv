@@ -19,7 +19,7 @@ const credibilityItems = [
   {
     icon: Globe2,
     label: 'Location',
-    value: 'Jakarta-based, remote-ready',
+    value: 'Bogor-based, remote-ready',
   },
 ];
 

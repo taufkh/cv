@@ -79,7 +79,7 @@ export function ContactSection() {
 
             <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">
               <MapPin className="h-4 w-4" />
-              Based in Jakarta, Indonesia • Available for remote collaboration
+              Based in Bogor, Indonesia • Available for remote collaboration
             </div>
           </div>
 

@@ -59,7 +59,7 @@ export function HeroSection() {
               >
                 <span className="inline-flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
-                  Jakarta, Indonesia
+                  Bogor, Indonesia
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <Award className="h-4 w-4" />
